@@ -177,8 +177,8 @@ export const ThreePhotoSphere = () => {
 
     // 1. Scene & Camera
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(42, width / height, 0.1, 1000);
-    camera.position.z = 5.2;
+    const camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
+    camera.position.z = 7.0;
 
     // 2. High-Precision WebGL Renderer
     const renderer = new THREE.WebGLRenderer({
@@ -187,6 +187,7 @@ export const ThreePhotoSphere = () => {
       powerPreference: "high-performance",
     });
     renderer.setSize(width, height);
+    renderer.setClearColor(0x000000, 0);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.2;
@@ -236,15 +237,13 @@ export const ThreePhotoSphere = () => {
       transparent: true,
       opacity: 0.8,
     });
-    const starField = new THREE.Points(starGeo, starMat);
-    scene.add(starField);
+    // scene.add(starField);
 
     // 5. Earth Master Group
     const earthGroup = new THREE.Group();
-    earthGroup.position.y = 0.05;
     scene.add(earthGroup);
 
-    const globeRadius = 2.05;
+    const globeRadius = 2.0;
     const sunDirection = new THREE.Vector3(1.3, 0.4, 0.75).normalize();
 
     // --- LAYER 1: Photorealistic Earth Surface ---
@@ -682,8 +681,8 @@ export const ThreePhotoSphere = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full min-h-[560px] sm:min-h-[660px] lg:min-h-[760px] xl:min-h-[840px] flex items-center justify-center select-none overflow-visible">
-      {/* 100% Clean Transparent WebGL Canvas - Free-Flow Globe */}
+    <div className="relative w-full h-full aspect-square flex items-center justify-center select-none">
+      {/* 100% Clean Transparent WebGL Canvas */}
       <div ref={mountRef} className="w-full h-full cursor-grab active:cursor-grabbing touch-none" />
     </div>
   );

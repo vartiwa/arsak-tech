@@ -67,10 +67,10 @@ export const Hero = ({ onOpenContact }) => {
             </Reveal>
           </div>
 
-          {/* Right Column: Massive Centerpiece 3D Earth Globe Covering Right Half */}
-          <div className="lg:col-span-7 flex flex-col items-center justify-center relative w-full overflow-visible -translate-y-3 lg:-translate-y-7">
+          {/* Right Column: Centerpiece 3D Earth Globe */}
+          <div className="lg:col-span-6 flex flex-col items-center justify-center relative w-full">
             <Reveal delay={0.06} className="w-full flex flex-col items-center">
-              <div className="w-full h-[540px] sm:h-[630px] lg:h-[720px] xl:h-[780px] flex items-center justify-center select-none overflow-visible">
+              <div className="w-full max-w-[500px] sm:max-w-[560px] lg:max-w-[600px] aspect-square flex items-center justify-center select-none">
                 <ThreePhotoSphere />
               </div>
               <div className="mt-2 text-center text-xs font-mono text-[#7A756B] flex items-center justify-center gap-2">
