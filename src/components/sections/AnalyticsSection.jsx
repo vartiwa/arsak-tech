@@ -4,6 +4,7 @@ import { Reveal } from "../common/Reveal";
 import { SectionHeading } from "../common/SectionHeading";
 import { Counter } from "../common/Counter";
 import { InteractiveCard } from "../common/InteractiveCard";
+import { Activity } from "lucide-react";
 
 const STAT_GLOWS = {
   blue: "rgba(59, 130, 246, 0.16)",
@@ -22,24 +23,34 @@ export const AnalyticsSection = () => (
         sub="Demonstrated efficiency gains achieved across client automation deployments."
         center
       />
-      <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {STATS.map((s, i) => (
           <Reveal key={s.label} delay={i * 0.06}>
-            <InteractiveCard accentColor={STAT_GLOWS[s.accent] || "rgba(59, 130, 246, 0.15)"} className="p-6 flex flex-col justify-between h-full">
-              <div>
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center border ${ACCENT[s.accent].border} ${ACCENT[s.accent].bg} mb-4 shadow-sm`}>
+            <InteractiveCard accentColor={STAT_GLOWS[s.accent] || "rgba(59, 130, 246, 0.15)"} className="h-full">
+              {/* TOP COMPARTMENT (Header & Icon Box as per Sketch) */}
+              <div className="p-4 bg-[#0e1628]/80 border-b border-slate-700/70 flex items-center justify-between">
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center border ${ACCENT[s.accent].border} ${ACCENT[s.accent].bg} shadow-inner`}>
                   <s.icon size={18} className={ACCENT[s.accent].text} />
                 </div>
-                <div
-                  className="text-3xl sm:text-4xl font-bold text-white tracking-tight"
-                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                >
-                  <Counter to={s.to} suffix={s.suffix} prefix={s.prefix || ""} />
-                </div>
-                <p className="text-slate-300 text-xs md:text-sm mt-2 font-medium">{s.label}</p>
+                <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-2 py-0.5 rounded">
+                  Telemetry Active
+                </span>
               </div>
-              <div className="mt-5 pt-3 border-t border-slate-800/60 text-[11px] font-mono text-slate-400">
-                Production Metric 0{i + 1}
+
+              {/* BOTTOM COMPARTMENT (Body Metric Counter as per Sketch) */}
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-[#070b16]/90">
+                <div>
+                  <div
+                    className="text-3xl sm:text-4xl font-bold text-white tracking-tight"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  >
+                    <Counter to={s.to} suffix={s.suffix} prefix={s.prefix || ""} />
+                  </div>
+                  <p className="text-slate-300 text-xs sm:text-sm mt-2 font-medium leading-relaxed">{s.label}</p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-slate-800/60 text-[11px] font-mono text-slate-400">
+                  Aggregated KPI 0{i + 1}
+                </div>
               </div>
             </InteractiveCard>
           </Reveal>
