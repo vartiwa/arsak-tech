@@ -241,6 +241,7 @@ export const ThreePhotoSphere = () => {
 
     // 5. Earth Master Group
     const earthGroup = new THREE.Group();
+    earthGroup.position.y = 0.22;
     scene.add(earthGroup);
 
     const globeRadius = 2.05;
@@ -528,7 +529,7 @@ export const ThreePhotoSphere = () => {
     });
     const flareSprite = new THREE.Sprite(flareMat);
     flareSprite.scale.set(0.75, 0.75, 1.0);
-    flareSprite.position.set(globeRadius * 0.94, globeRadius * 0.35, globeRadius * 0.22);
+    flareSprite.position.set(globeRadius * 0.94, globeRadius * 0.35 + 0.22, globeRadius * 0.22);
     scene.add(flareSprite);
 
     // Initial framing orientation centered over India & Outbound Global Routes

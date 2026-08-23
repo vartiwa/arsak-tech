@@ -68,12 +68,12 @@ export const Hero = ({ onOpenContact }) => {
           </div>
 
           {/* Right Column: Massive Centerpiece 3D Earth Globe Covering Right Half */}
-          <div className="lg:col-span-7 flex flex-col items-center justify-center relative w-full overflow-visible">
+          <div className="lg:col-span-7 flex flex-col items-center justify-center relative w-full overflow-visible -translate-y-3 lg:-translate-y-7">
             <Reveal delay={0.06} className="w-full flex flex-col items-center">
-              <div className="w-full h-[520px] sm:h-[620px] lg:h-[720px] xl:h-[780px] flex items-center justify-center select-none overflow-visible">
+              <div className="w-full h-[540px] sm:h-[630px] lg:h-[720px] xl:h-[780px] flex items-center justify-center select-none overflow-visible">
                 <ThreePhotoSphere />
               </div>
-              <div className="mt-1 text-center text-xs font-mono text-[#7A756B] flex items-center justify-center gap-2">
+              <div className="mt-2 text-center text-xs font-mono text-[#7A756B] flex items-center justify-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#16140E]" />
                 <span>Global Indian Engineering Hubs & Partner Capital Arcs</span>
               </div>
