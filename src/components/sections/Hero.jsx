@@ -6,11 +6,11 @@ import { ThreePhotoSphere } from "../common/ThreePhotoSphere";
 export const Hero = ({ onOpenContact }) => {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-transparent">
-      <div className="max-w-6xl mx-auto px-6 md:px-8">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-6 items-center">
           
           {/* Left Column: Editorial Value Proposition */}
-          <div className="lg:col-span-6 flex flex-col items-start text-left">
+          <div className="lg:col-span-5 flex flex-col items-start text-left z-10">
             <Reveal>
               <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-[rgba(22,20,14,0.12)] bg-[#EFECE4] mb-6 text-xs font-mono text-[#10160A] font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#10160A] shadow-sm animate-pulse" />
@@ -19,13 +19,13 @@ export const Hero = ({ onOpenContact }) => {
             </Reveal>
 
             <Reveal delay={0.04}>
-              <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-bold text-[#16140E] tracking-[-0.035em] leading-[1.08] max-w-2xl font-['Space_Grotesk']" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold text-[#16140E] tracking-[-0.035em] leading-[1.08] max-w-xl font-['Space_Grotesk']" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                 Intelligent Software & Automation Pipelines for Growing Enterprises.
               </h1>
             </Reveal>
 
             <Reveal delay={0.08}>
-              <p className="mt-6 text-base sm:text-lg text-[#5C584E] leading-relaxed max-w-xl font-normal">
+              <p className="mt-6 text-base sm:text-lg text-[#5C584E] leading-relaxed max-w-lg font-normal">
                 Arsak Technologies builds resilient AI extraction models, automated workflow backbones, and custom enterprise software that eliminate manual friction forever.
               </p>
             </Reveal>
@@ -50,7 +50,7 @@ export const Hero = ({ onOpenContact }) => {
 
             {/* Quick Proof Metrics */}
             <Reveal delay={0.16}>
-              <div className="mt-12 pt-8 border-t border-[rgba(22,20,14,0.08)] grid grid-cols-3 gap-6 sm:gap-10 w-full max-w-lg">
+              <div className="mt-12 pt-8 border-t border-[rgba(22,20,14,0.08)] grid grid-cols-3 gap-6 sm:gap-8 w-full max-w-md">
                 <div>
                   <div className="text-2xl sm:text-3xl font-bold text-[#16140E] font-mono">99.8%</div>
                   <div className="text-xs text-[#7A756B] mt-1 font-mono uppercase tracking-wider">Extraction Accuracy</div>
@@ -67,10 +67,10 @@ export const Hero = ({ onOpenContact }) => {
             </Reveal>
           </div>
 
-          {/* Right Column: Centerpiece 3D Photorealistic Interactive Earth Globe */}
-          <div className="lg:col-span-6 flex flex-col items-center justify-center relative w-full">
+          {/* Right Column: Massive Centerpiece 3D Earth Globe Covering Right Half */}
+          <div className="lg:col-span-7 flex flex-col items-center justify-center relative w-full overflow-visible">
             <Reveal delay={0.06} className="w-full flex flex-col items-center">
-              <div className="w-full max-w-[620px] sm:max-w-[700px] lg:max-w-[780px] aspect-square flex items-center justify-center select-none">
+              <div className="w-full h-[520px] sm:h-[620px] lg:h-[720px] xl:h-[780px] flex items-center justify-center select-none overflow-visible">
                 <ThreePhotoSphere />
               </div>
               <div className="mt-1 text-center text-xs font-mono text-[#7A756B] flex items-center justify-center gap-2">
