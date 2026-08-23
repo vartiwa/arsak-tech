@@ -11,7 +11,7 @@ const WHY_GLOWS = {
 };
 
 export const WhySection = () => (
-  <section id="why" className="py-16 md:py-24 border-t border-[rgba(239,237,226,0.08)] bg-transparent relative">
+  <section id="why" className="py-16 md:py-24 border-t border-[rgba(15,21,36,0.08)] bg-transparent relative">
     <div className="max-w-6xl mx-auto px-6 md:px-8">
       <SectionHeading
         eyebrow="Why Arsak"
@@ -25,22 +25,22 @@ export const WhySection = () => (
           <Reveal key={w.title} delay={i * 0.08}>
             <InteractiveCard accentColor={WHY_GLOWS[w.accent] || "rgba(59, 130, 246, 0.16)"} className="h-full">
               {/* TOP COMPARTMENT (Header with Icon Box as per Sketch) */}
-              <div className="p-5 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+              <div className="p-5 bg-[#F1F4F9] border-b border-slate-200 flex items-center justify-between">
                 <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${ACCENT[w.accent].border} ${ACCENT[w.accent].bg} shadow-inner`}>
                   <w.icon size={20} className={ACCENT[w.accent].text} />
                 </div>
-                <span className="text-xs font-mono text-[#B7B5AA]">Pillar 0{i + 1}</span>
+                <span className="text-xs font-mono text-[#475569]">Pillar 0{i + 1}</span>
               </div>
 
               {/* BOTTOM COMPARTMENT (Body Content as per Sketch) */}
-              <div className="p-6 flex-1 flex flex-col justify-between bg-[#0E100F]/95">
+              <div className="p-6 flex-1 flex flex-col justify-between bg-white">
                 <div>
-                  <h3 className="text-lg font-semibold text-[#EFEDE2] mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  <h3 className="text-lg font-semibold text-[#0F1524] mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                     {w.title}
                   </h3>
-                  <p className="text-[#B7B5AA] text-sm leading-relaxed">{w.desc}</p>
+                  <p className="text-[#475569] text-sm leading-relaxed">{w.desc}</p>
                 </div>
-                <div className="mt-5 pt-3 border-t border-[rgba(239,237,226,0.08)] text-xs font-mono text-[#B7B5AA]">
+                <div className="mt-5 pt-3 border-t border-[rgba(15,21,36,0.08)] text-xs font-mono text-[#475569]">
                   Enterprise Grade Guarantee
                 </div>
               </div>

@@ -4,25 +4,26 @@
 
 @layer base {
   :root {
-    --bg: #0B0D0C;
+    --bg: #F6F7F9;
+    --paper: #FFFFFF;
+    --paper-2: #F0F3F8;
     --lime: #C0EB3A;
-    --lime-hover: #D4F85E;
+    --lime-hover: #B0DD28;
     --lime-deep: #10160A;
     --amber: #F3B44A;
-    --ink: #EFEDE2;
-    --ink-2: #B7B5AA;
-    --ink-3: #7D7C72;
-    --line: rgba(239, 237, 226, 0.12);
-    --line-subtle: rgba(239, 237, 226, 0.06);
-    --panel-top: #151815;
-    --panel-body: #0E100F;
+    --ink: #0F1524;
+    --ink-2: #383C48;
+    --ink-3: #64748B;
+    --ink-4: #94A3B8;
+    --line: rgba(15, 21, 36, 0.10);
+    --line-subtle: rgba(15, 21, 36, 0.05);
   }
 
   html, body, #root {
     min-height: 100%;
     margin: 0;
-    background: #0B0D0C;
-    color: #EFEDE2;
+    background: #F6F7F9;
+    color: #0F1524;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -57,14 +58,31 @@
   font-weight: 600;
   border-radius: 9999px;
   transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 4px 14px -2px rgba(192, 235, 58, 0.4);
 }
 
 .btn-lime:hover {
-  background-color: #D4F85E;
+  background-color: #B2DF2A;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(192, 235, 58, 0.35);
+  box-shadow: 0 8px 20px -3px rgba(192, 235, 58, 0.5);
 }
 
 .btn-lime:active {
   transform: scale(0.97);
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #0F1524;
+  font-weight: 500;
+  border: 1px solid rgba(15, 21, 36, 0.15);
+  border-radius: 9999px;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-secondary:hover {
+  background-color: #F8FAFC;
+  border-color: rgba(15, 21, 36, 0.3);
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
 }

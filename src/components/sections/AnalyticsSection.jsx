@@ -14,7 +14,7 @@ const STAT_GLOWS = {
 };
 
 export const AnalyticsSection = () => (
-  <section className="py-16 md:py-24 border-t border-[rgba(239,237,226,0.08)] bg-transparent relative">
+  <section className="py-16 md:py-24 border-t border-[rgba(15,21,36,0.08)] bg-transparent relative">
     <div className="max-w-6xl mx-auto px-6 md:px-8">
       <SectionHeading
         eyebrow="Measurable Results"
@@ -28,7 +28,7 @@ export const AnalyticsSection = () => (
           <Reveal key={s.label} delay={i * 0.06}>
             <InteractiveCard accentColor={STAT_GLOWS[s.accent] || "rgba(59, 130, 246, 0.15)"} className="h-full">
               {/* TOP COMPARTMENT (Header & Icon Box as per Sketch) */}
-              <div className="p-4 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+              <div className="p-4 bg-[#F1F4F9] border-b border-slate-200 flex items-center justify-between">
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center border ${ACCENT[s.accent].border} ${ACCENT[s.accent].bg} shadow-inner`}>
                   <s.icon size={18} className={ACCENT[s.accent].text} />
                 </div>
@@ -38,17 +38,17 @@ export const AnalyticsSection = () => (
               </div>
 
               {/* BOTTOM COMPARTMENT (Body Metric Counter as per Sketch) */}
-              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-[#0E100F]/95">
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-white">
                 <div>
                   <div
-                    className="text-3xl sm:text-4xl font-bold text-[#EFEDE2] tracking-tight"
+                    className="text-3xl sm:text-4xl font-bold text-[#0F1524] tracking-tight"
                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                   >
                     <Counter to={s.to} suffix={s.suffix} prefix={s.prefix || ""} />
                   </div>
-                  <p className="text-[#B7B5AA] text-xs sm:text-sm mt-2 font-medium leading-relaxed">{s.label}</p>
+                  <p className="text-[#475569] text-xs sm:text-sm mt-2 font-medium leading-relaxed">{s.label}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-[rgba(239,237,226,0.08)] text-[11px] font-mono text-[#B7B5AA]">
+                <div className="mt-4 pt-3 border-t border-[rgba(15,21,36,0.08)] text-[11px] font-mono text-[#475569]">
                   Aggregated KPI 0{i + 1}
                 </div>
               </div>
@@ -56,7 +56,7 @@ export const AnalyticsSection = () => (
           </Reveal>
         ))}
       </div>
-      <p className="text-center text-[#7D7C72] text-xs mt-7 font-mono">
+      <p className="text-center text-[#64748B] text-xs mt-7 font-mono">
         * Aggregated performance averages across deployed production systems
       </p>
     </div>

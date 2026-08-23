@@ -8,7 +8,7 @@ import { InteractiveCard } from "../common/InteractiveCard";
 const ManualDeskPanel = () => (
   <InteractiveCard accentColor="rgba(245, 158, 11, 0.12)" className="h-full">
     {/* Top Header Compartment */}
-    <div className="p-5 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+    <div className="p-5 bg-[#F1F4F9] border-b border-slate-200 flex items-center justify-between">
       <div className="w-10 h-10 rounded-xl flex items-center justify-center border border-amber-500/30 bg-amber-500/10 text-amber-400">
         <AlertTriangle size={18} />
       </div>
@@ -17,9 +17,9 @@ const ManualDeskPanel = () => (
       </span>
     </div>
     {/* Bottom Body Compartment */}
-    <div className="p-6 bg-[#0E100F]/95 flex flex-col justify-between flex-1">
+    <div className="p-6 bg-white flex flex-col justify-between flex-1">
       <div>
-        <h3 className="text-[#EFEDE2] font-semibold text-base mb-3" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+        <h3 className="text-[#0F1524] font-semibold text-base mb-3" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
           Manual Operations Bottleneck
         </h3>
         <div className="grid grid-cols-6 gap-2 mb-6">
@@ -31,11 +31,11 @@ const ManualDeskPanel = () => (
             />
           ))}
         </div>
-        <div className="flex items-center gap-2.5 text-[#B7B5AA] text-xs sm:text-sm">
+        <div className="flex items-center gap-2.5 text-[#475569] text-xs sm:text-sm">
           <User size={14} className="text-amber-400 shrink-0" />
           <span>Teams re-typing data across disconnected tools</span>
         </div>
-        <div className="flex items-center gap-2.5 text-[#B7B5AA] text-xs sm:text-sm mt-3">
+        <div className="flex items-center gap-2.5 text-[#475569] text-xs sm:text-sm mt-3">
           <PenLine size={14} className="text-amber-400 shrink-0" />
           <span>Manual spot-checks causing verification delays</span>
         </div>
@@ -45,7 +45,7 @@ const ManualDeskPanel = () => (
 );
 
 export const ProblemSection = () => (
-  <section className="py-16 md:py-24 border-t border-[rgba(239,237,226,0.08)] bg-transparent relative">
+  <section className="py-16 md:py-24 border-t border-[rgba(15,21,36,0.08)] bg-transparent relative">
     <div className="max-w-6xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-10 items-center">
       <Reveal>
         <ManualDeskPanel />
@@ -61,16 +61,16 @@ export const ProblemSection = () => (
           {PROBLEMS.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.06}>
               <InteractiveCard accentColor="rgba(245, 158, 11, 0.12)">
-                <div className="p-4 bg-[#151815]/80 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+                <div className="p-4 bg-[#F1F4F9] border-b border-slate-200 flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg flex items-center justify-center border border-amber-500/30 bg-amber-500/10 text-amber-400">
                       <p.icon size={16} />
                     </div>
-                    <span className="text-[#EFEDE2] text-sm font-semibold">{p.title}</span>
+                    <span className="text-[#0F1524] text-sm font-semibold">{p.title}</span>
                   </div>
-                  <span className="text-xs font-mono text-[#B7B5AA]">0{i + 1}</span>
+                  <span className="text-xs font-mono text-[#475569]">0{i + 1}</span>
                 </div>
-                <div className="px-4 py-3 bg-[#0E100F]/95 text-xs text-[#B7B5AA]">
+                <div className="px-4 py-3 bg-white text-xs text-[#475569]">
                   Eliminated with Arsak autonomous extraction & validation pipelines.
                 </div>
               </InteractiveCard>

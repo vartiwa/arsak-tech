@@ -6,7 +6,7 @@ import { FlowLine } from "../common/FlowLine";
 import { InteractiveCard } from "../common/InteractiveCard";
 
 export const HowItWorks = () => (
-  <section className="py-16 md:py-24 border-t border-[rgba(239,237,226,0.08)] bg-transparent relative">
+  <section className="py-16 md:py-24 border-t border-[rgba(15,21,36,0.08)] bg-transparent relative">
     <div className="max-w-6xl mx-auto px-6 md:px-8">
       <SectionHeading
         eyebrow="Process"
@@ -24,12 +24,12 @@ export const HowItWorks = () => (
                   Step {s.n}
                 </span>
                 <h3
-                  className="text-[#EFEDE2] font-semibold text-sm mb-1.5"
+                  className="text-[#0F1524] font-semibold text-sm mb-1.5"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
                   {s.title}
                 </h3>
-                <p className="text-[#B7B5AA] text-xs leading-relaxed">{s.desc}</p>
+                <p className="text-[#475569] text-xs leading-relaxed">{s.desc}</p>
               </div>
             </InteractiveCard>
             {i < STEPS.length - 1 && (

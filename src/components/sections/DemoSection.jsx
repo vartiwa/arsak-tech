@@ -1,300 +1,140 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, Play, RotateCcw, Sparkles, Terminal, Activity, Server, Zap, ArrowUpRight, Cpu } from "lucide-react";
+import { Terminal, CheckCircle2, Play, Sparkles, Activity, FileJson, ArrowUpRight, Cpu } from "lucide-react";
 import { Reveal } from "../common/Reveal";
 import { SectionHeading } from "../common/SectionHeading";
 import { InteractiveCard } from "../common/InteractiveCard";
 
 export const DemoSection = () => {
-  const [activeBar, setActiveBar] = useState(null);
-  const [isProcessing, setIsProcessing] = useState(false);
-  const [pipelineState, setPipelineState] = useState("idle");
-  const [activeTab, setActiveTab] = useState("config");
+  const [activeMetric, setActiveMetric] = useState(0);
 
-  const bars = [
-    { id: 1, color: "#3b82f6", height: "38%", label: "Ingestion", value: "99.4%", latency: "4ms" },
-    { id: 2, color: "#06b6d4", height: "62%", label: "OCR Parsing", value: "99.8%", latency: "12ms" },
-    { id: 3, color: "#a855f7", height: "30%", label: "Schema Validation", value: "100%", latency: "6ms" },
-    { id: 4, color: "#84cc16", height: "84%", label: "Throughput", value: "1.2k/s", latency: "Real-time" },
-    { id: 5, color: "#f97316", height: "54%", label: "Dynamic Routing", value: "14ms", latency: "Optimized" },
-    { id: 6, color: "#2563eb", height: "96%", label: "ERP Synchronization", value: "99.9%", latency: "Instant" },
-    { id: 7, color: "#14b8a6", height: "45%", label: "Telemetry Feed", value: "Active", latency: "Live" },
+  const metrics = [
+    { name: "OCR", label: "Model Latency", val: "18ms", color: "#16a34a" },
+    { name: "LLM", label: "Context Window", val: "128k", color: "#2563eb" },
+    { name: "ERP", label: "API Sync Rate", val: "99.9%", color: "#16a34a" },
+    { name: "SEC", label: "TLS Encryption", val: "v1.3", color: "#7c3aed" },
+    { name: "OPS", label: "Throughput", val: "2.4k/s", color: "#d97706" },
+    { name: "VPC", label: "Isolated Node", val: "Ready", color: "#059669" },
+    { name: "ISO", label: "Compliance", val: "Passed", color: "#16a34a" }
   ];
 
-  const handleRunPipeline = () => {
-    setIsProcessing(true);
-    setPipelineState("running");
-    setTimeout(() => {
-      setIsProcessing(false);
-      setPipelineState("completed");
-    }, 1100);
-  };
-
-  const handleReset = () => {
-    setPipelineState("idle");
-    setIsProcessing(false);
-  };
-
   return (
-    <section id="demo" className="py-16 md:py-24 border-t border-[rgba(239,237,226,0.08)] bg-transparent relative">
+    <section id="demo" className="py-16 md:py-24 border-t border-[rgba(15,21,36,0.08)] bg-transparent relative">
       <div className="max-w-6xl mx-auto px-6 md:px-8">
         <SectionHeading
-          eyebrow="Architecture & Pipeline"
-          accent="blue"
-          title="Modular, Multi-Box Enterprise Engine."
-          sub="Inspect how Arsak orchestrates intelligent data pipelines, validation rules, and autonomous ERP sync."
+          eyebrow="Interactive Blueprint"
+          title="Engineered with Mathematical Precision."
+          sub="Inspect our autonomous extraction pipelines, live telemetry visualizers, and ERP synchronization schemas."
           center
         />
 
-        {/* Multi-Box Bento Grid Container */}
-        <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* BOX 1: The Exact Developer Code & Multi-Bar Config Card (Reference Image) */}
-          <Reveal className="lg:col-span-7 flex flex-col">
-            <InteractiveCard accentColor="rgba(56, 189, 248, 0.15)" className="p-6 sm:p-7 flex flex-col justify-between h-full">
-              <div>
-                {/* Window Header with Tabs */}
-                <div className="flex items-center justify-between mb-6 pb-3 border-b border-[rgba(239,237,226,0.12)] text-xs font-mono">
+        <div className="mt-14 grid lg:grid-cols-12 gap-6">
+          
+          {/* Main Config Card */}
+          <div className="lg:col-span-7">
+            <Reveal>
+              <InteractiveCard className="h-full">
+                {/* Header Compartment */}
+                <div className="p-4 sm:p-5 bg-[#F1F4F9] border-b border-slate-200 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-2.5 h-2.5 rounded-full bg-rose-400" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                    </div>
+                    <span className="text-xs font-mono text-[#0F1524] font-semibold">pipeline.arsak.config</span>
+                  </div>
+                  <span className="text-xs font-mono text-[#10160A] bg-[#C0EB3A] px-2.5 py-0.5 rounded-full font-semibold">
+                    Production Active
+                  </span>
+                </div>
+
+                {/* Body Content with Syntax Highlighting */}
+                <div className="p-6 bg-white flex-1 flex flex-col justify-between font-mono text-xs sm:text-[13px] leading-relaxed">
+                  <div className="text-[#334155] space-y-1">
+                    <div><span className="text-[#2563eb] font-semibold">const</span> <span className="text-[#0F1524] font-bold">pipeline</span> = <span className="text-[#7c3aed]">new</span> <span className="text-[#d97706] font-bold">ArsakPipeline</span>({'{'}</div>
+                    <div className="pl-4"><span className="text-[#64748B]">tenant:</span> <span className="text-[#16a34a]">"enterprise.prod.in"</span>,</div>
+                    <div className="pl-4"><span className="text-[#64748B]">model:</span> <span className="text-[#16a34a]">"arsak-extractor-v4"</span>,</div>
+                    <div className="pl-4"><span className="text-[#64748B]">validation:</span> <span className="text-[#0F1524] font-semibold">"strict_schema_enforced"</span>,</div>
+                    <div className="pl-4"><span className="text-[#64748B]">connectors:</span> [<span className="text-[#16a34a]">"SAP"</span>, <span className="text-[#16a34a]">"PostgreSQL"</span>, <span className="text-[#16a34a]">"Salesforce"</span>]</div>
+                    <div>{'}'});</div>
+                    <div className="pt-2 text-[#94A3B8]">// Live Execution Telemetry:</div>
+                    <div><span className="text-[#2563eb]">await</span> <span className="text-[#0F1524]">pipeline</span>.<span className="text-[#d97706]">dispatchSync</span>();</div>
+                  </div>
+
+                  {/* 7-Bar Telemetry Metric Visualizer */}
+                  <div className="mt-8 pt-5 border-t border-slate-200">
+                    <div className="flex items-center justify-between text-xs mb-3 text-[#475569]">
+                      <span className="text-[#0F1524] font-bold">{metrics[activeMetric].name} Telemetry</span>
+                      <span>{metrics[activeMetric].label}: <strong className="text-[#0F1524]">{metrics[activeMetric].val}</strong></span>
+                    </div>
+                    <div className="grid grid-cols-7 gap-2">
+                      {metrics.map((m, idx) => (
+                        <button
+                          key={m.name}
+                          onClick={() => setActiveMetric(idx)}
+                          className={`h-12 rounded-lg transition-all flex flex-col items-center justify-center gap-1 border ${
+                            activeMetric === idx
+                              ? "border-[#10160A] bg-[#C0EB3A] scale-105 shadow-sm"
+                              : "border-slate-200 bg-[#F8FAFC] hover:border-slate-300"
+                          }`}
+                        >
+                          <span className="text-[10px] font-bold text-[#0F1524]">{m.name}</span>
+                          <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: m.color }} />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </InteractiveCard>
+            </Reveal>
+          </div>
+
+          {/* Right Column: Sub-Bento Boxes */}
+          <div className="lg:col-span-5 flex flex-col gap-6">
+            
+            {/* Box 1: Extraction Schema Output */}
+            <Reveal delay={0.06}>
+              <InteractiveCard>
+                <div className="p-4 bg-[#F1F4F9] border-b border-slate-200 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500/70" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/70" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/70" />
-                    <span className="ml-2 font-mono text-[#B7B5AA]">pipeline.arsak.config</span>
+                    <FileJson size={16} className="text-[#10160A]" />
+                    <span className="text-xs font-mono text-[#0F1524] font-bold">payload.extracted.json</span>
                   </div>
-                  <div className="flex items-center gap-1.5 bg-slate-900/90 border border-[rgba(239,237,226,0.1)] p-0.5 rounded-lg">
-                    <button
-                      onClick={() => setActiveTab("config")}
-                      className={`px-2.5 py-1 rounded text-[11px] font-mono transition-colors ${activeTab === "config" ? "bg-slate-800 text-[#EFEDE2] font-semibold" : "text-[#B7B5AA] hover:text-slate-200"}`}
-                    >
-                      Config
-                    </button>
-                    <button
-                      onClick={() => setActiveTab("metrics")}
-                      className={`px-2.5 py-1 rounded text-[11px] font-mono transition-colors ${activeTab === "metrics" ? "bg-slate-800 text-[#EFEDE2] font-semibold" : "text-[#B7B5AA] hover:text-slate-200"}`}
-                    >
-                      Metrics
-                    </button>
-                  </div>
+                  <span className="text-[11px] font-mono text-[#16a34a] font-semibold">Validated</span>
                 </div>
+                <div className="p-5 bg-white font-mono text-xs text-[#334155] space-y-1.5">
+                  <div className="flex justify-between"><span>invoice_id:</span> <span className="text-[#0F1524] font-semibold">"INV-2048"</span></div>
+                  <div className="flex justify-between"><span>vendor:</span> <span className="text-[#0F1524] font-semibold">"ABC Industries Ltd."</span></div>
+                  <div className="flex justify-between"><span>net_payable:</span> <span className="text-[#0F1524] font-bold">"₹84,500.00"</span></div>
+                  <div className="flex justify-between"><span>confidence:</span> <span className="text-[#16a34a] font-semibold">"99.82%"</span></div>
+                </div>
+              </InteractiveCard>
+            </Reveal>
 
-                {/* Code Block with Exact Syntax Highlights */}
-                <div className="font-mono text-sm sm:text-base leading-relaxed tracking-tight select-none mb-7 bg-slate-950/40 p-4 rounded-xl border border-[rgba(239,237,226,0.08)]">
-                  <div className="flex flex-wrap items-center">
-                    <span className="text-purple-400 font-medium">const</span>
-                    <span className="text-[#EFEDE2] ml-2 font-medium">workflow</span>
-                    <span className="text-purple-400 ml-2 font-medium">=</span>
-                    <span className="text-[#C0EB3A] ml-2 font-semibold">createPipeline</span>
-                    <span className="text-pink-400 font-medium">(</span>
-                    <span className="text-pink-300 font-medium">source</span>
-                    <span className="text-pink-400 font-medium">)</span>
+            {/* Box 2: Autonomous Copilot Mode */}
+            <Reveal delay={0.1}>
+              <InteractiveCard>
+                <div className="p-4 bg-[#F1F4F9] border-b border-slate-200 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Cpu size={16} className="text-[#2563eb]" />
+                    <span className="text-xs font-mono text-[#0F1524] font-bold">copilot.autonomous.node</span>
                   </div>
-                  <div className="text-[#B7B5AA] text-xs sm:text-sm my-2 font-normal">
-                    // AI Extraction · Validation · Routing
-                  </div>
-                  <div className="flex flex-wrap items-center">
-                    <span className="text-[#C0EB3A] font-medium">deploy</span>
-                    <span className="text-[#EFEDE2] font-medium">(</span>
-                    <span className="text-[#EFEDE2] font-medium">workflow</span>
-                    <span className="text-[#EFEDE2] font-medium">)</span>
-                    <span className="text-[#B7B5AA]">.to(</span>
-                    <span className="text-lime-400 font-medium">"enterprise-erp"</span>
-                    <span className="text-[#B7B5AA]">)</span>
+                  <span className="text-[11px] font-mono text-[#2563eb] font-semibold">VPC Secure</span>
+                </div>
+                <div className="p-5 bg-white flex flex-col justify-between text-xs text-[#475569]">
+                  <p className="leading-relaxed">
+                    Zero-human-intervention routing configured. Exceptions exceeding tolerance trigger instantaneous Slack/Email escalations.
+                  </p>
+                  <div className="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between font-mono text-[11px]">
+                    <span className="text-[#0F1524] font-semibold">Audit Trace: 100% Immutable</span>
+                    <ArrowUpRight size={13} className="text-[#64748B]" />
                   </div>
                 </div>
-              </div>
+              </InteractiveCard>
+            </Reveal>
 
-              {/* Inset Multi-Bar Chart Box with Interactive Hover Depth */}
-              <div className="rounded-xl border border-[rgba(239,237,226,0.14)] bg-[#0B0D0C] p-5 sm:p-6 mt-auto shadow-inner">
-                <div className="flex items-center justify-between mb-3 text-xs font-mono text-[#B7B5AA]">
-                  <span className="flex items-center gap-1.5">
-                    <Cpu size={13} className="text-[#C0EB3A]" /> Pipeline Throughput Telemetry
-                  </span>
-                  <span className="text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded">
-                    Real-time (60 FPS)
-                  </span>
-                </div>
+          </div>
 
-                <div className="flex items-end justify-between h-24 sm:h-28 gap-2.5 sm:gap-4 px-2 pt-2">
-                  {bars.map((bar) => {
-                    const isHovered = activeBar === bar.id;
-                    return (
-                      <div
-                        key={bar.id}
-                        onMouseEnter={() => setActiveBar(bar.id)}
-                        onMouseLeave={() => setActiveBar(null)}
-                        className="flex-1 flex flex-col items-center justify-end h-full group relative cursor-pointer"
-                      >
-                        {/* Interactive Tooltip on Hover */}
-                        {isHovered && (
-                          <div className="absolute -top-11 bg-slate-900/95 border border-slate-700 text-[#EFEDE2] text-[11px] font-mono px-2.5 py-1 rounded shadow-xl whitespace-nowrap z-30 pointer-events-none transform -translate-y-1 transition-all">
-                            <div className="font-semibold text-[#C0EB3A]">{bar.label}</div>
-                            <div className="text-[#B7B5AA] text-[10px]">{bar.value} · {bar.latency}</div>
-                          </div>
-                        )}
-                        {/* Bar with Subtle Gradient & Elevation on Hover */}
-                        <div
-                          className="w-full rounded-t-sm transition-all duration-300 transform-gpu group-hover:scale-y-105 group-hover:brightness-125 shadow-sm"
-                          style={{
-                            height: bar.height,
-                            backgroundColor: bar.color,
-                            opacity: activeBar === null || isHovered ? 0.95 : 0.45,
-                            boxShadow: isHovered ? `0 0 16px ${bar.color}66` : "none",
-                          }}
-                        />
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="flex justify-between items-center mt-3 pt-3 border-t border-slate-900 text-[11px] font-mono text-[#7D7C72]">
-                  <span>INPUT INGESTION</span>
-                  <span>ENTERPRISE DISPATCH</span>
-                </div>
-              </div>
-            </InteractiveCard>
-          </Reveal>
-
-          {/* BOX 2: Live AI Extraction Payload & Action Box */}
-          <Reveal delay={0.06} className="lg:col-span-5 flex flex-col">
-            <InteractiveCard accentColor="rgba(168, 85, 247, 0.14)" className="p-6 sm:p-7 flex flex-col justify-between h-full">
-              <div>
-                <div className="flex items-center justify-between mb-5 pb-3 border-b border-[rgba(239,237,226,0.12)]">
-                  <div className="flex items-center gap-2 text-xs font-mono text-[#B7B5AA]">
-                    <Terminal size={14} className="text-[#C0EB3A]" />
-                    <span>payload.extracted.json</span>
-                  </div>
-                  <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded">
-                    {pipelineState === "completed" ? "Validated 100%" : "Schema Ready"}
-                  </span>
-                </div>
-
-                <div className="bg-[#0B0D0C] border border-[rgba(239,237,226,0.14)] rounded-xl p-4 font-mono text-xs text-[#B7B5AA] space-y-2.5 shadow-inner">
-                  <div className="flex justify-between items-center py-0.5 border-b border-slate-900/60">
-                    <span className="text-[#7D7C72]">customer_entity:</span>
-                    <span className="text-[#EFEDE2] font-medium">"ABC Industries Ltd."</span>
-                  </div>
-                  <div className="flex justify-between items-center py-0.5 border-b border-slate-900/60">
-                    <span className="text-[#7D7C72]">document_id:</span>
-                    <span className="text-[#C0EB3A]">"#INV-2048-HQ"</span>
-                  </div>
-                  <div className="flex justify-between items-center py-0.5 border-b border-slate-900/60">
-                    <span className="text-[#7D7C72]">verified_items:</span>
-                    <span className="text-emerald-400 font-semibold">14 Line Items (100%)</span>
-                  </div>
-                  <div className="flex justify-between items-center py-0.5 border-b border-slate-900/60">
-                    <span className="text-[#7D7C72]">reconciliation_rate:</span>
-                    <span className="text-amber-300">99.8% Confidence</span>
-                  </div>
-                  <div className="flex justify-between items-center py-0.5">
-                    <span className="text-[#7D7C72]">destination_sync:</span>
-                    <span className="text-indigo-300">"SAP S/4HANA"</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Execution Controls */}
-              <div className="mt-6 pt-4 border-t border-[rgba(239,237,226,0.12)] flex items-center justify-between gap-3">
-                <button
-                  onClick={handleRunPipeline}
-                  disabled={isProcessing}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-white text-slate-950 hover:bg-slate-100 disabled:opacity-60 font-semibold text-sm px-5 py-2.5 rounded-lg transition-all shadow-md active:scale-[0.98] cursor-pointer"
-                >
-                  <Play size={14} className={isProcessing ? "animate-spin text-blue-600" : ""} />
-                  {isProcessing ? "Processing Pipeline..." : pipelineState === "completed" ? "Re-run Pipeline" : "Simulate Live Run"}
-                </button>
-                {pipelineState === "completed" && (
-                  <button
-                    onClick={handleReset}
-                    className="p-2.5 rounded-lg border border-slate-700 bg-slate-900 hover:bg-slate-800 text-[#B7B5AA] transition-colors cursor-pointer"
-                    title="Reset"
-                  >
-                    <RotateCcw size={15} />
-                  </button>
-                )}
-              </div>
-            </InteractiveCard>
-          </Reveal>
-
-          {/* BOX 3: Telemetry Metrics Card */}
-          <Reveal delay={0.10} className="lg:col-span-4">
-            <InteractiveCard accentColor="rgba(59, 130, 246, 0.15)" className="p-6 flex flex-col justify-between h-full">
-              <div className="flex items-center justify-between text-xs font-mono text-[#B7B5AA] mb-4">
-                <span className="flex items-center gap-1.5 text-[#F3B44A]">
-                  <Activity size={14} /> telemetry.metrics
-                </span>
-                <ArrowUpRight size={14} className="text-[#7D7C72]" />
-              </div>
-              <div>
-                <div className="text-3xl sm:text-4xl font-bold text-[#EFEDE2] tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                  78%
-                </div>
-                <div className="text-sm text-[#B7B5AA] font-medium mt-1">Average Automation Rate</div>
-                <p className="text-xs text-[#B7B5AA] mt-2">
-                  Measured across 1.2M+ enterprise workflow cycles with zero manual intervention.
-                </p>
-              </div>
-              <div className="mt-4 pt-3 border-t border-[rgba(239,237,226,0.08)] flex items-center justify-between text-xs font-mono text-[#B7B5AA]">
-                <span>Cycle Time:</span>
-                <span className="text-emerald-400 font-bold">-42% Reduction</span>
-              </div>
-            </InteractiveCard>
-          </Reveal>
-
-          {/* BOX 4: Bi-Directional Connectors Card */}
-          <Reveal delay={0.12} className="lg:col-span-4">
-            <InteractiveCard accentColor="rgba(16, 185, 129, 0.14)" className="p-6 flex flex-col justify-between h-full">
-              <div className="flex items-center justify-between text-xs font-mono text-[#B7B5AA] mb-4">
-                <span className="flex items-center gap-1.5 text-emerald-400">
-                  <Server size={14} /> connectors.status
-                </span>
-                <span className="text-[10px] text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-800/50">99.9% Uptime</span>
-              </div>
-              <div className="space-y-2 text-xs font-mono">
-                <div className="flex items-center justify-between p-2 rounded-lg bg-[#0B0D0C] border border-[rgba(239,237,226,0.12)] hover:border-slate-700 transition-colors">
-                  <span className="text-[#B7B5AA]">SAP / Oracle ERP</span>
-                  <span className="text-emerald-400 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> 12ms
-                  </span>
-                </div>
-                <div className="flex items-center justify-between p-2 rounded-lg bg-[#0B0D0C] border border-[rgba(239,237,226,0.12)] hover:border-slate-700 transition-colors">
-                  <span className="text-[#B7B5AA]">Salesforce / CRM</span>
-                  <span className="text-emerald-400 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> 18ms
-                  </span>
-                </div>
-                <div className="flex items-center justify-between p-2 rounded-lg bg-[#0B0D0C] border border-[rgba(239,237,226,0.12)] hover:border-slate-700 transition-colors">
-                  <span className="text-[#B7B5AA]">PostgreSQL / Cloud</span>
-                  <span className="text-emerald-400 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> 8ms
-                  </span>
-                </div>
-              </div>
-              <div className="mt-4 pt-3 border-t border-[rgba(239,237,226,0.08)] flex items-center justify-between text-xs font-mono text-[#B7B5AA]">
-                <span>Active Pipelines:</span>
-                <span className="text-[#EFEDE2] font-medium">42 Live Feeds</span>
-              </div>
-            </InteractiveCard>
-          </Reveal>
-
-          {/* BOX 5: Operations Co-Pilot Box */}
-          <Reveal delay={0.14} className="lg:col-span-4">
-            <InteractiveCard accentColor="rgba(245, 158, 11, 0.14)" className="p-6 flex flex-col justify-between h-full">
-              <div className="flex items-center justify-between text-xs font-mono text-[#B7B5AA] mb-4">
-                <span className="flex items-center gap-1.5 text-amber-400">
-                  <Zap size={14} /> copilot.autonomous
-                </span>
-                <ArrowUpRight size={14} className="text-[#7D7C72]" />
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-[#EFEDE2] mb-1.5">Autonomous Exception Routing</div>
-                <p className="text-xs text-[#B7B5AA] leading-relaxed">
-                  Automatically flags missing tax IDs, resolves pricing variances, and dispatches validated transactions.
-                </p>
-              </div>
-              <div className="mt-4 pt-3 border-t border-[rgba(239,237,226,0.08)] flex items-center justify-between text-xs font-mono text-[#B7B5AA]">
-                <span>Weekly Resolves:</span>
-                <span className="text-[#C0EB3A] font-bold">1,284 Tasks</span>
-              </div>
-            </InteractiveCard>
-          </Reveal>
         </div>
       </div>
     </section>

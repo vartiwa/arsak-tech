@@ -6,7 +6,7 @@ import { InteractiveCard } from "../common/InteractiveCard";
 import { ArrowUpRight, Layers } from "lucide-react";
 
 export const ServicesSection = ({ onOpenContact }) => (
-  <section id="services" className="py-16 md:py-24 border-t border-[rgba(239,237,226,0.08)] bg-transparent relative">
+  <section id="services" className="py-16 md:py-24 border-t border-[rgba(15,21,36,0.08)] bg-transparent relative">
     <div className="max-w-6xl mx-auto px-6 md:px-8">
       <SectionHeading
         eyebrow="Capabilities"
@@ -19,26 +19,26 @@ export const ServicesSection = ({ onOpenContact }) => (
           <Reveal key={s} delay={i * 0.05}>
             <InteractiveCard accentColor="rgba(56, 189, 248, 0.14)" className="h-full cursor-pointer" onClick={onOpenContact}>
               {/* TOP COMPARTMENT (Header with Icon Box as per Sketch) */}
-              <div className="p-5 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+              <div className="p-5 bg-[#F1F4F9] border-b border-slate-200 flex items-center justify-between">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center border border-blue-500/30 bg-blue-500/10 shadow-inner text-[#F3B44A]">
                   <Layers size={18} />
                 </div>
-                <span className="text-xs font-mono text-[#B7B5AA]">Service 0{i + 1}</span>
+                <span className="text-xs font-mono text-[#475569]">Service 0{i + 1}</span>
               </div>
 
               {/* BOTTOM COMPARTMENT (Body Content as per Sketch) */}
-              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-[#0E100F]/95">
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-white">
                 <div>
-                  <h3 className="text-lg font-semibold text-[#EFEDE2] group-hover:text-[#EFEDE2] transition-colors mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  <h3 className="text-lg font-semibold text-[#0F1524] group-hover:text-[#0F1524] transition-colors mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                     {s}
                   </h3>
-                  <p className="text-xs text-[#B7B5AA] leading-relaxed">
+                  <p className="text-xs text-[#475569] leading-relaxed">
                     Custom engineered models and low-latency integration pipelines built for high enterprise throughput.
                   </p>
                 </div>
-                <div className="mt-5 pt-3 border-t border-[rgba(239,237,226,0.08)] flex items-center justify-between text-xs font-mono text-[#B7B5AA]">
+                <div className="mt-5 pt-3 border-t border-[rgba(15,21,36,0.08)] flex items-center justify-between text-xs font-mono text-[#475569]">
                   <span className="text-[#C0EB3A]">Request Blueprint</span>
-                  <ArrowUpRight size={13} className="text-[#7D7C72] group-hover:text-[#C0EB3A] transition-colors" />
+                  <ArrowUpRight size={13} className="text-[#64748B] group-hover:text-[#C0EB3A] transition-colors" />
                 </div>
               </div>
             </InteractiveCard>
