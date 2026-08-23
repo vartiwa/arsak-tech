@@ -28,7 +28,7 @@ export default function ArsakTechnologies() {
   const closeContact = () => setIsContactOpen(false);
 
   return (
-    <div className="relative min-h-screen bg-[#F6F7F9] text-[#0F1524] antialiased selection:bg-purple-500/30 selection:text-white">
+    <div className="relative min-h-screen bg-[#FBF9F4] text-[#16140E] antialiased selection:bg-purple-500/30 selection:text-white">
       {/* Fixed Planetary & Deep-Space Cosmic Background */}
       <SpaceBackground />
       {/* Global Interactive Cursor Spotlight */} 

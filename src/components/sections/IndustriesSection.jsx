@@ -27,7 +27,7 @@ const IndustryVisual = ({ accent }) => (
 );
 
 export const IndustriesSection = () => (
-  <section id="industries" className="py-16 md:py-24 border-t border-[rgba(15,21,36,0.08)] bg-transparent relative">
+  <section id="industries" className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.08)] bg-transparent relative">
     <div className="max-w-6xl mx-auto px-6 md:px-8">
       <SectionHeading
         eyebrow="Industries"
@@ -40,29 +40,29 @@ export const IndustriesSection = () => (
           <Reveal key={ind.title} delay={i * 0.05}>
             <InteractiveCard accentColor="rgba(245, 158, 11, 0.14)" className="h-full">
               {/* TOP COMPARTMENT (Header Visual as per Sketch) */}
-              <div className="p-4 bg-[#F1F4F9] border-b border-slate-200 flex flex-col gap-2.5">
+              <div className="p-4 bg-[#EFECE4] border-b border-[rgba(22,20,14,0.09)] flex flex-col gap-2.5">
                 <IndustryVisual accent={ind.accent} />
                 <div className="flex items-center justify-between">
                   <div className={`w-8 h-8 rounded-lg flex items-center justify-center border ${ACCENT[ind.accent].border} ${ACCENT[ind.accent].bg}`}>
                     <ind.icon size={16} className={ACCENT[ind.accent].text} />
                   </div>
-                  <span className="text-[11px] font-mono text-[#475569]">Sector 0{i + 1}</span>
+                  <span className="text-[11px] font-mono text-[#5C584E]">Sector 0{i + 1}</span>
                 </div>
               </div>
 
               {/* BOTTOM COMPARTMENT (Body Title & Details as per Sketch) */}
               <div className="p-5 flex-1 flex flex-col justify-between bg-white">
                 <div>
-                  <h3 className="text-[#0F1524] text-base font-semibold mb-1 group-hover:text-[#0F1524] transition-colors">
+                  <h3 className="text-[#16140E] text-base font-semibold mb-1 group-hover:text-[#16140E] transition-colors">
                     {ind.title}
                   </h3>
-                  <p className="text-xs text-[#475569] leading-relaxed">
+                  <p className="text-xs text-[#5C584E] leading-relaxed">
                     Automated compliance, high-volume invoice routing, and ERP synchronization.
                   </p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-[rgba(15,21,36,0.08)] flex items-center justify-between text-xs font-mono text-[#475569]">
+                <div className="mt-4 pt-3 border-t border-[rgba(22,20,14,0.08)] flex items-center justify-between text-xs font-mono text-[#5C584E]">
                   <span className="text-[#C0EB3A] font-medium">Enterprise Sector</span>
-                  <ArrowUpRight size={13} className="text-[#64748B]" />
+                  <ArrowUpRight size={13} className="text-[#7A756B]" />
                 </div>
               </div>
             </InteractiveCard>
@@ -75,11 +75,11 @@ export const IndustriesSection = () => (
         {INDUSTRIES_COMPACT.map((ind, i) => (
           <Reveal key={ind.title} delay={i * 0.04}>
             <InteractiveCard accentColor="rgba(148, 163, 184, 0.10)" className="h-full">
-              <div className="p-3.5 bg-[#F1F4F9] border-b border-slate-200 flex items-center justify-between">
-                <div className="w-7 h-7 rounded-lg flex items-center justify-center border border-slate-700 bg-slate-800/80 text-[#475569]">
+              <div className="p-3.5 bg-[#EFECE4] border-b border-[rgba(22,20,14,0.09)] flex items-center justify-between">
+                <div className="w-7 h-7 rounded-lg flex items-center justify-center border border-slate-700 bg-slate-800/80 text-[#5C584E]">
                   <ind.icon size={14} />
                 </div>
-                <span className="text-[10px] font-mono text-[#475569]">Industry</span>
+                <span className="text-[10px] font-mono text-[#5C584E]">Industry</span>
               </div>
               <div className="p-3.5 bg-white">
                 <span className="text-slate-200 text-sm font-semibold">{ind.title}</span>

@@ -12,7 +12,7 @@ export const Hero = ({ onOpenContact }) => {
           {/* Left Column: Editorial Value Proposition */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             <Reveal>
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-[rgba(15,21,36,0.12)] bg-[#EAF7B8] mb-6 text-xs font-mono text-[#10160A] font-semibold">
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-[rgba(22,20,14,0.12)] bg-[#EFECE4] mb-6 text-xs font-mono text-[#10160A] font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#10160A] shadow-sm animate-pulse" />
                 <span>Available for Enterprise Deployments & Pilots</span>
               </div>
@@ -20,14 +20,14 @@ export const Hero = ({ onOpenContact }) => {
 
             <Reveal delay={0.04}>
               <h1
-                className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-[#0F1524] tracking-[-0.035em] leading-[1.08] max-w-2xl"
+                className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-[#16140E] tracking-[-0.035em] leading-[1.08] max-w-2xl"
               >
                 Intelligent Software & Automation Pipelines for Growing Enterprises.
               </h1>
             </Reveal>
 
             <Reveal delay={0.08}>
-              <p className="mt-6 text-base sm:text-lg text-[#475569] leading-relaxed max-w-xl font-normal">
+              <p className="mt-6 text-base sm:text-lg text-[#5C584E] leading-relaxed max-w-xl font-normal">
                 Arsak Technologies builds resilient AI extraction models, automated workflow backbones, and custom enterprise software that eliminate manual friction forever.
               </p>
             </Reveal>
@@ -52,18 +52,18 @@ export const Hero = ({ onOpenContact }) => {
 
             {/* Quick Proof Metrics */}
             <Reveal delay={0.16}>
-              <div className="mt-12 pt-8 border-t border-[rgba(15,21,36,0.08)] grid grid-cols-3 gap-6 sm:gap-10 w-full max-w-lg">
+              <div className="mt-12 pt-8 border-t border-[rgba(22,20,14,0.08)] grid grid-cols-3 gap-6 sm:gap-10 w-full max-w-lg">
                 <div>
-                  <div className="text-2xl sm:text-3xl font-bold text-[#0F1524] font-mono">99.8%</div>
-                  <div className="text-xs text-[#64748B] mt-1 font-mono uppercase tracking-wider">Extraction Accuracy</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-[#16140E] font-mono">99.8%</div>
+                  <div className="text-xs text-[#7A756B] mt-1 font-mono uppercase tracking-wider">Extraction Accuracy</div>
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-bold text-[#0F1524] font-mono">&lt;250ms</div>
-                  <div className="text-xs text-[#64748B] mt-1 font-mono uppercase tracking-wider">Processing Latency</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-[#16140E] font-mono">&lt;250ms</div>
+                  <div className="text-xs text-[#7A756B] mt-1 font-mono uppercase tracking-wider">Processing Latency</div>
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-bold text-[#0F1524] font-mono">100%</div>
-                  <div className="text-xs text-[#64748B] mt-1 font-mono uppercase tracking-wider">Audit Trail Logged</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-[#16140E] font-mono">100%</div>
+                  <div className="text-xs text-[#7A756B] mt-1 font-mono uppercase tracking-wider">Audit Trail Logged</div>
                 </div>
               </div>
             </Reveal>
@@ -75,7 +75,7 @@ export const Hero = ({ onOpenContact }) => {
               <div className="relative w-full aspect-square max-w-[460px] sm:max-w-[480px] mx-auto flex items-center justify-center select-none">
                 <ThreePhotoSphere />
               </div>
-              <div className="mt-2 text-center text-xs font-mono text-[#64748B] flex items-center justify-center gap-2">
+              <div className="mt-2 text-center text-xs font-mono text-[#7A756B] flex items-center justify-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#10160A]" />
                 <span>Global Indian Engineering Hubs & Partner Arcs</span>
               </div>

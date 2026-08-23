@@ -6,16 +6,16 @@ export const SectionHeading = ({ eyebrow, title, sub, center = false, accent = "
     {eyebrow && (
       <Reveal>
         <span
-          className="inline-flex items-center gap-2 text-xs font-mono tracking-[0.14em] uppercase text-[#0F1524] border border-[rgba(15,21,36,0.12)] bg-[#EAF7B8] px-3.5 py-1 rounded-full mb-4 font-semibold"
+          className="inline-flex items-center gap-2 text-xs font-mono tracking-[0.14em] uppercase text-[#16140E] border border-[rgba(22,20,14,0.12)] bg-[#EFECE4] px-3.5 py-1 rounded-full mb-4 font-semibold"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#10160A]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#C0EB3A]" />
           {eyebrow}
         </span>
       </Reveal>
     )}
     <Reveal delay={0.04}>
       <h2
-        className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F1524] tracking-tight leading-[1.18]"
+        className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#16140E] tracking-tight leading-[1.18]"
         style={{ letterSpacing: "-0.03em" }}
       >
         {title}
@@ -23,7 +23,7 @@ export const SectionHeading = ({ eyebrow, title, sub, center = false, accent = "
     </Reveal>
     {sub && (
       <Reveal delay={0.08}>
-        <p className="mt-3.5 text-[#475569] text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
+        <p className="mt-3.5 text-[#5C584E] text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
           {sub}
         </p>
       </Reveal>

@@ -4,7 +4,7 @@ import { Reveal } from "../common/Reveal";
 import { SectionHeading } from "../common/SectionHeading";
 
 export const IntegrationsSection = () => (
-  <section className="py-16 md:py-20 border-t border-[rgba(15,21,36,0.08)] bg-transparent">
+  <section className="py-16 md:py-20 border-t border-[rgba(22,20,14,0.08)] bg-transparent">
     <div className="max-w-6xl mx-auto px-6 md:px-8">
       <SectionHeading
         eyebrow="Integrations"

@@ -24,14 +24,14 @@ export const Nav = ({ onOpenContact }) => {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-200 ${
         scrolled
-          ? "bg-[#F6F7F9]/92 backdrop-blur-md border-b border-[rgba(15,21,36,0.08)] shadow-sm py-3"
+          ? "bg-[#FBF9F4]/92 backdrop-blur-md border-b border-[rgba(22,20,14,0.08)] shadow-sm py-3"
           : "bg-transparent border-b border-transparent py-4 sm:py-5"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 md:px-8 flex items-center justify-between">
-        {/* Brand Logo in Clean Container */}
+        {/* Brand Logo in Clean Beige Container */}
         <a href="#" className="flex items-center select-none group">
-          <div className="bg-white hover:bg-slate-50 transition-all px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center">
+          <div className="bg-white hover:bg-[#F4F0E8] transition-all px-3.5 py-1.5 rounded-xl border border-[rgba(22,20,14,0.1)] shadow-sm flex items-center justify-center">
             <img
               src="/logo.png"
               alt="Arsak Technologies Logo"
@@ -46,7 +46,7 @@ export const Nav = ({ onOpenContact }) => {
             <a
               key={item.label}
               href={item.href}
-              className="text-[13.5px] font-medium text-[#475569] hover:text-[#0F1524] transition-colors"
+              className="text-[13.5px] font-medium text-[#5C584E] hover:text-[#16140E] transition-colors"
             >
               {item.label}
             </a>
@@ -66,7 +66,7 @@ export const Nav = ({ onOpenContact }) => {
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden text-[#475569] hover:text-[#0F1524] p-1 rounded-md focus:outline-none"
+          className="md:hidden text-[#5C584E] hover:text-[#16140E] p-1 rounded-md focus:outline-none"
           onClick={() => setOpen(!open)}
           aria-label="Toggle navigation menu"
           aria-expanded={open}
@@ -83,14 +83,14 @@ export const Nav = ({ onOpenContact }) => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden bg-white border-b border-slate-200 px-6 py-5 flex flex-col gap-4 shadow-xl"
+            className="md:hidden overflow-hidden bg-[#FBF9F4] border-b border-[rgba(22,20,14,0.1)] px-6 py-5 flex flex-col gap-4 shadow-xl"
           >
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="text-[#475569] hover:text-[#0F1524] text-base py-1 transition-colors font-medium"
+                className="text-[#5C584E] hover:text-[#16140E] text-base py-1 transition-colors font-medium"
               >
                 {item.label}
               </a>

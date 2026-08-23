@@ -4,26 +4,27 @@
 
 @layer base {
   :root {
-    --bg: #F6F7F9;
+    --bg: #FBF9F4;
     --paper: #FFFFFF;
-    --paper-2: #F0F3F8;
+    --paper-beige: #F4F0E8;
+    --paper-header: #EFECE4;
     --lime: #C0EB3A;
     --lime-hover: #B0DD28;
-    --lime-deep: #10160A;
+    --lime-deep: #14170E;
     --amber: #F3B44A;
-    --ink: #0F1524;
-    --ink-2: #383C48;
-    --ink-3: #64748B;
-    --ink-4: #94A3B8;
-    --line: rgba(15, 21, 36, 0.10);
-    --line-subtle: rgba(15, 21, 36, 0.05);
+    --ink: #16140E;
+    --ink-2: #3E3B33;
+    --ink-3: #6B675E;
+    --ink-4: #9A958A;
+    --line: rgba(22, 20, 14, 0.09);
+    --line-subtle: rgba(22, 20, 14, 0.05);
   }
 
   html, body, #root {
     min-height: 100%;
     margin: 0;
-    background: #F6F7F9;
-    color: #0F1524;
+    background: #FBF9F4;
+    color: #16140E;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -35,7 +36,7 @@
 
   ::selection {
     background: #C0EB3A;
-    color: #10160A;
+    color: #14170E;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -54,7 +55,7 @@
 
 .btn-lime {
   background-color: #C0EB3A;
-  color: #10160A;
+  color: #14170E;
   font-weight: 600;
   border-radius: 9999px;
   transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
@@ -73,16 +74,16 @@
 
 .btn-secondary {
   background-color: #FFFFFF;
-  color: #0F1524;
+  color: #16140E;
   font-weight: 500;
-  border: 1px solid rgba(15, 21, 36, 0.15);
+  border: 1px solid rgba(22, 20, 14, 0.14);
   border-radius: 9999px;
   transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .btn-secondary:hover {
-  background-color: #F8FAFC;
-  border-color: rgba(15, 21, 36, 0.3);
+  background-color: #F8F6F0;
+  border-color: rgba(22, 20, 14, 0.28);
   transform: translateY(-1.5px);
-  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px -2px rgba(22, 20, 14, 0.06);
 }
