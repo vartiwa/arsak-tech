@@ -22,13 +22,14 @@ export const Nav = ({ onOpenContact }) => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-200 ${
-        scrolled
-          ? "bg-[#FBF9F4]/92 backdrop-blur-md border-b border-[rgba(22,20,14,0.08)] shadow-sm py-3"
-          : "bg-transparent border-b border-transparent py-4 sm:py-5"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-200 bg-[#FBF9F4]/95 backdrop-blur-md border-b border-[rgba(22,20,14,0.12)] ${
+        scrolled ? "py-3 shadow-[0_4px_16px_-4px_rgba(22,20,14,0.06)]" : "py-3.5 sm:py-4 shadow-sm"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-8 flex items-center justify-between">
+      {/* Subtle Bottom Specular Line */}
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[rgba(22,20,14,0.06)] to-transparent pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
         {/* Brand Logo in Clean Beige Container */}
         <a href="#" className="flex items-center select-none group">
           <div className="bg-white hover:bg-[#F4F0E8] transition-all px-3.5 py-1.5 rounded-xl border border-[rgba(22,20,14,0.1)] shadow-sm flex items-center justify-center">
