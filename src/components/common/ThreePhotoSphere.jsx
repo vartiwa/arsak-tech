@@ -177,8 +177,8 @@ export const ThreePhotoSphere = () => {
 
     // 1. Scene & Camera
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 1000);
-    camera.position.z = 6.6;
+    const camera = new THREE.PerspectiveCamera(44, width / height, 0.1, 1000);
+    camera.position.z = 6.8;
 
     // 2. High-Precision WebGL Renderer
     const renderer = new THREE.WebGLRenderer({
@@ -241,7 +241,7 @@ export const ThreePhotoSphere = () => {
 
     // 5. Earth Master Group
     const earthGroup = new THREE.Group();
-    earthGroup.position.y = 0.22;
+    earthGroup.position.y = 0.10;
     scene.add(earthGroup);
 
     const globeRadius = 2.05;
@@ -529,7 +529,7 @@ export const ThreePhotoSphere = () => {
     });
     const flareSprite = new THREE.Sprite(flareMat);
     flareSprite.scale.set(0.75, 0.75, 1.0);
-    flareSprite.position.set(globeRadius * 0.94, globeRadius * 0.35 + 0.22, globeRadius * 0.22);
+    flareSprite.position.set(globeRadius * 0.94, globeRadius * 0.35 + 0.10, globeRadius * 0.22);
     scene.add(flareSprite);
 
     // Initial framing orientation centered over India & Outbound Global Routes
