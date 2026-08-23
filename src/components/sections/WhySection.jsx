@@ -20,23 +20,29 @@ export const WhySection = () => (
         sub="Why leading engineering and ops teams choose Arsak as their automation backbone."
         center
       />
-      <div className="mt-12 grid md:grid-cols-3 gap-5">
+      <div className="mt-12 grid md:grid-cols-3 gap-6">
         {WHY.map((w, i) => (
           <Reveal key={w.title} delay={i * 0.08}>
-            <InteractiveCard accentColor={WHY_GLOWS[w.accent] || "rgba(59, 130, 246, 0.16)"} className="p-7 flex flex-col justify-between h-full">
-              <div>
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center border ${ACCENT[w.accent].border} ${ACCENT[w.accent].bg} mb-5 shadow-sm`}>
-                  <w.icon size={22} className={ACCENT[w.accent].text} />
+            <InteractiveCard accentColor={WHY_GLOWS[w.accent] || "rgba(59, 130, 246, 0.16)"} className="h-full">
+              {/* TOP COMPARTMENT (Header with Icon Box as per Sketch) */}
+              <div className="p-5 bg-[#0e1628]/80 border-b border-slate-700/70 flex items-center justify-between">
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${ACCENT[w.accent].border} ${ACCENT[w.accent].bg} shadow-inner`}>
+                  <w.icon size={20} className={ACCENT[w.accent].text} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                  {w.title}
-                </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  {w.desc}
-                </p>
+                <span className="text-xs font-mono text-slate-400">Pillar 0{i + 1}</span>
               </div>
-              <div className="mt-6 pt-3 border-t border-slate-800/60 text-xs font-mono text-slate-400">
-                Pillar 0{i + 1} Foundation
+
+              {/* BOTTOM COMPARTMENT (Body Content as per Sketch) */}
+              <div className="p-6 flex-1 flex flex-col justify-between bg-[#070b16]/90">
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                    {w.title}
+                  </h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{w.desc}</p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-slate-800/60 text-xs font-mono text-slate-400">
+                  Enterprise Grade Guarantee
+                </div>
               </div>
             </InteractiveCard>
           </Reveal>

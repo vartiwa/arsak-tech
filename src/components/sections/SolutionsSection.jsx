@@ -3,6 +3,7 @@ import { SOLUTIONS, ACCENT } from "../../data/siteData";
 import { Reveal } from "../common/Reveal";
 import { SectionHeading } from "../common/SectionHeading";
 import { InteractiveCard } from "../common/InteractiveCard";
+import { ArrowUpRight } from "lucide-react";
 
 const ACCENT_GLOWS = {
   blue: "rgba(59, 130, 246, 0.16)",
@@ -21,25 +22,36 @@ export const SolutionsSection = () => (
         title="Engineered for real operational impact."
         sub="Purpose-built automation pipelines and software modules that resolve your biggest workflow bottlenecks."
       />
-      <div className="mt-12 grid sm:grid-cols-2 gap-5">
+      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {SOLUTIONS.map((s, i) => (
-          <Reveal key={s.title} delay={i * 0.05} className={i % 3 === 0 ? "sm:col-span-2" : ""}>
-            <InteractiveCard accentColor={ACCENT_GLOWS[s.accent] || "rgba(59, 130, 246, 0.16)"} className="p-6 md:p-7 flex items-start gap-4">
-              <div
-                className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 border ${
-                  ACCENT[s.accent].border
-                } ${ACCENT[s.accent].bg} shadow-sm`}
-              >
-                <s.icon size={20} className={ACCENT[s.accent].text} />
+          <Reveal key={s.title} delay={i * 0.05}>
+            <InteractiveCard accentColor={ACCENT_GLOWS[s.accent] || "rgba(59, 130, 246, 0.16)"} className="h-full">
+              {/* TOP COMPARTMENT (Header with Icon/Visual Box as per Sketch) */}
+              <div className="p-5 bg-[#0e1628]/80 border-b border-slate-700/70 flex items-center justify-between">
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${ACCENT[s.accent].border} ${ACCENT[s.accent].bg} shadow-inner`}>
+                  <s.icon size={20} className={ACCENT[s.accent].text} />
+                </div>
+                <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400 group-hover:text-cyan-300 transition-colors">
+                  <span>Module 0{i + 1}</span>
+                  <ArrowUpRight size={14} className="opacity-60 group-hover:opacity-100 transition-opacity" />
+                </div>
               </div>
-              <div className="min-w-0">
-                <h3
-                  className="text-white font-semibold text-base mb-1.5 group-hover:text-cyan-200 transition-colors"
-                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                >
-                  {s.title}
-                </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
+
+              {/* BOTTOM COMPARTMENT (Body Content with Title & Description as per Sketch) */}
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-[#070b16]/90">
+                <div>
+                  <h3
+                    className="text-white font-semibold text-base mb-2 group-hover:text-cyan-200 transition-colors"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  >
+                    {s.title}
+                  </h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs font-mono text-slate-400">
+                  <span className="text-cyan-400 font-medium">Enterprise Pipeline</span>
+                  <span>Active Ready</span>
+                </div>
               </div>
             </InteractiveCard>
           </Reveal>
