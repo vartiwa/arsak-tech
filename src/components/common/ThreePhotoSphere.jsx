@@ -177,8 +177,8 @@ export const ThreePhotoSphere = () => {
 
     // 1. Scene & Camera
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(44, width / height, 0.1, 1000);
-    camera.position.z = 6.8;
+    const camera = new THREE.PerspectiveCamera(42, width / height, 0.1, 1000);
+    camera.position.z = 5.2;
 
     // 2. High-Precision WebGL Renderer
     const renderer = new THREE.WebGLRenderer({
@@ -241,7 +241,7 @@ export const ThreePhotoSphere = () => {
 
     // 5. Earth Master Group
     const earthGroup = new THREE.Group();
-    earthGroup.position.y = 0.10;
+    earthGroup.position.y = 0.05;
     scene.add(earthGroup);
 
     const globeRadius = 2.05;
@@ -682,18 +682,9 @@ export const ThreePhotoSphere = () => {
   }, []);
 
   return (
-    <div className="relative w-full aspect-square max-w-[460px] sm:max-w-[480px] lg:max-w-[500px] mx-auto flex items-center justify-center select-none">
-      {/* Cosmic Nebula Backlight */}
-      <div
-        className="absolute inset-0 rounded-full opacity-60 blur-3xl pointer-events-none -z-0"
-        style={{
-          background:
-            "radial-gradient(circle at 75% 35%, rgba(56,189,248,0.5) 0%, rgba(30,58,138,0.45) 40%, rgba(15,23,42,0.3) 70%, transparent 95%)",
-        }}
-      />
-
-      {/* WebGL Canvas Mounting Container */}
-      <div ref={mountRef} className="w-full h-full cursor-grab active:cursor-grabbing touch-none z-10" />
+    <div className="relative w-full h-full min-h-[560px] sm:min-h-[660px] lg:min-h-[760px] xl:min-h-[840px] flex items-center justify-center select-none overflow-visible">
+      {/* 100% Clean Transparent WebGL Canvas - Free-Flow Globe */}
+      <div ref={mountRef} className="w-full h-full cursor-grab active:cursor-grabbing touch-none" />
     </div>
   );
 };
