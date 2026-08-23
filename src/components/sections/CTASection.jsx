@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Reveal } from "../common/Reveal";
 
 export const CTASection = ({ onOpenContact }) => (
-  <section id="cta" className="relative py-20 md:py-32 border-t border-slate-800/60 overflow-hidden bg-transparent">
+  <section id="cta" className="relative py-20 md:py-32 border-t border-[rgba(239,237,226,0.08)] overflow-hidden bg-transparent">
     <div
       className="absolute inset-0 -z-0 opacity-[0.12] blur-3xl pointer-events-none"
       style={{ background: "radial-gradient(50% 60% at 50% 30%, #a855f7, transparent 70%)" }}
@@ -14,12 +14,12 @@ export const CTASection = ({ onOpenContact }) => (
           Ready to Modernize?
         </span>
         <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.15] tracking-tight"
+          className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#EFEDE2] leading-[1.15] tracking-tight"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
           Ready to automate your next enterprise process?
         </h2>
-        <p className="mt-4 text-zinc-400 text-base max-w-lg mx-auto">
+        <p className="mt-4 text-[#B7B5AA] text-base max-w-lg mx-auto">
           Contact our solutions team to receive a tailored feasibility blueprint and ROI calculation.
         </p>
         <div className="mt-8">
