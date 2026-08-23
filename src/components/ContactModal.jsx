@@ -204,6 +204,13 @@ export const ContactModal = ({ isOpen, onClose }) => {
                     {loading ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
                     {loading ? "Transmitting Specification…" : "Request Automation Blueprint"}
                   </button>
+                <div className="mt-4 pt-3 border-t border-[rgba(22,20,14,0.08)] flex items-center justify-between text-[11px] font-mono text-[#6B6557]">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-[#059669]" />
+                      256-Bit TLS Encrypted · Mutual NDA Enforced
+                    </span>
+                    <span className="text-[#059669] font-bold">Zero-Retention</span>
+                  </div>
                 </form>
               )}
             </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { SpaceBackground } from "./components/common/SpaceBackground";
+import { ScrollFlowStream } from "./components/common/ScrollFlowStream";
 import { CursorGlow } from "./components/common/CursorGlow";
 import { Nav } from "./components/Nav";
 import { ContactModal } from "./components/ContactModal";
@@ -39,6 +40,9 @@ export default function ArsakTechnologies() {
 
       {/* Main Landing Page Content */}
       <main className="relative z-10">
+        {/* Static Architectural Flow Stream Connecting 3D Earth to Lower Sections */}
+        <ScrollFlowStream />
+
         <Hero onOpenContact={openContact} />
         <TrustSection />
         <ProblemSection />
