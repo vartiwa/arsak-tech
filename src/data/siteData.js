@@ -6,11 +6,11 @@ import {
 } from "lucide-react";
 
 export const ACCENT = {
-  blue:   { text: "text-blue-400",   border: "border-blue-500/25",   bg: "bg-blue-500/10",   dot: "#3b82f6", ring: "hover:border-blue-500/50" },
-  cyan:   { text: "text-sky-400",    border: "border-sky-500/25",    bg: "bg-sky-500/10",    dot: "#38bdf8", ring: "hover:border-sky-500/50" },
-  purple: { text: "text-indigo-400", border: "border-indigo-500/25", bg: "bg-indigo-500/10", dot: "#818cf8", ring: "hover:border-indigo-500/50" },
-  green:  { text: "text-emerald-400",border: "border-emerald-500/25",bg: "bg-emerald-500/10",dot: "#10b981", ring: "hover:border-emerald-500/50" },
-  orange: { text: "text-amber-400",  border: "border-amber-500/25",  bg: "bg-amber-500/10",  dot: "#f59e0b", ring: "hover:border-amber-500/50" },
+  blue:   { text: "text-blue-700",   border: "border-blue-200",   bg: "bg-blue-50",   dot: "#2563eb", ring: "hover:border-blue-400" },
+  cyan:   { text: "text-sky-800",    border: "border-sky-200",    bg: "bg-sky-50",    dot: "#0284c7", ring: "hover:border-sky-400" },
+  purple: { text: "text-indigo-700", border: "border-indigo-200", bg: "bg-indigo-50", dot: "#4f46e5", ring: "hover:border-indigo-400" },
+  green:  { text: "text-emerald-700",border: "border-emerald-200",bg: "bg-emerald-50",dot: "#059669", ring: "hover:border-emerald-400" },
+  orange: { text: "text-amber-800",  border: "border-amber-200",  bg: "bg-amber-50",  dot: "#d97706", ring: "hover:border-amber-400" },
 };
 
 export const NAV_LINKS = ["Solutions", "Industries", "Services", "About"];

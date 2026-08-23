@@ -57,7 +57,7 @@ export const DemoSection = () => {
                     <div className="pl-4"><span className="text-[#6B6557]">validation:</span> <span className="text-[#0D0C09] font-bold">"strict_schema_enforced"</span>,</div>
                     <div className="pl-4"><span className="text-[#6B6557]">connectors:</span> [<span className="text-[#059669] font-medium">"SAP"</span>, <span className="text-[#059669] font-medium">"PostgreSQL"</span>, <span className="text-[#059669] font-medium">"Salesforce"</span>]</div>
                     <div>{'}'});</div>
-                    <div className="pt-2 text-[#8A8475]">// Live Execution Telemetry:</div>
+                    <div className="pt-2 text-[#6B6557]">// Live Execution Telemetry:</div>
                     <div><span className="text-[#2563EB] font-bold">await</span> <span className="text-[#0D0C09] font-bold">pipeline</span>.<span className="text-[#D97706] font-bold">dispatchSync</span>();</div>
                   </div>
 
@@ -142,7 +142,7 @@ export const DemoSection = () => {
                       <span className="w-2 h-2 rounded-full bg-[#059669]" />
                       Audit Trace: 100% Immutable
                     </span>
-                    <ArrowUpRight size={13} className="text-[#8A8475]" />
+                    <ArrowUpRight size={13} className="text-[#6B6557]" />
                   </div>
                 </div>
               </InteractiveCard>

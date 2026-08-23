@@ -56,7 +56,7 @@ export const AnalyticsSection = () => (
           </Reveal>
         ))}
       </div>
-      <p className="text-center text-[#756F62] text-xs mt-7 font-mono">
+      <p className="text-center text-[#4A453A] text-xs mt-7 font-mono">
         * Aggregated performance averages across deployed production systems
       </p>
     </div>

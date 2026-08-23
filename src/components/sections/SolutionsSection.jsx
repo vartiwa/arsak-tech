@@ -5,52 +5,42 @@ import { SectionHeading } from "../common/SectionHeading";
 import { InteractiveCard } from "../common/InteractiveCard";
 import { ArrowUpRight } from "lucide-react";
 
-const ACCENT_GLOWS = {
-  blue: "rgba(59, 130, 246, 0.16)",
-  cyan: "rgba(56, 189, 248, 0.16)",
-  purple: "rgba(129, 140, 248, 0.16)",
-  green: "rgba(16, 185, 129, 0.16)",
-  orange: "rgba(245, 158, 11, 0.16)",
-};
-
 export const SolutionsSection = () => (
   <section id="solutions" className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] relative">
-    <div className="max-w-6xl mx-auto px-6 md:px-8">
+    <div className="max-w-7xl mx-auto px-6 md:px-8">
       <SectionHeading
         eyebrow="Solutions"
-        accent="blue"
         title="Engineered for real operational impact."
         sub="Purpose-built automation pipelines and software modules that resolve your biggest workflow bottlenecks."
       />
       <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {SOLUTIONS.map((s, i) => (
           <Reveal key={s.title} delay={i * 0.05}>
-            <InteractiveCard accentColor={ACCENT_GLOWS[s.accent] || "rgba(59, 130, 246, 0.16)"} className="h-full">
-              {/* TOP COMPARTMENT (Header with Icon/Visual Box as per Sketch) */}
+            <InteractiveCard className="h-full">
+              {/* TOP COMPARTMENT */}
               <div className="p-5 bg-[#EFECE3] shadow-[inset_0_2px_4px_rgba(22,20,14,0.03)] border-b border-[rgba(22,20,14,0.11)] flex items-center justify-between">
-                <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${ACCENT[s.accent].border} ${ACCENT[s.accent].bg} shadow-inner`}>
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${ACCENT[s.accent].border} ${ACCENT[s.accent].bg} shadow-sm`}>
                   <s.icon size={20} className={ACCENT[s.accent].text} />
                 </div>
-                <div className="flex items-center gap-1.5 text-xs font-mono text-[#4A453A] group-hover:text-[#C0EB3A] transition-colors">
+                <div className="flex items-center gap-1.5 text-xs font-mono text-[#6B6557] font-bold group-hover:text-[#0D0C09] transition-colors">
                   <span>Module 0{i + 1}</span>
-                  <ArrowUpRight size={14} className="opacity-60 group-hover:opacity-100 transition-opacity" />
+                  <ArrowUpRight size={14} className="opacity-70 group-hover:opacity-100 transition-opacity" />
                 </div>
               </div>
 
-              {/* BOTTOM COMPARTMENT (Body Content with Title & Description as per Sketch) */}
+              {/* BOTTOM COMPARTMENT */}
               <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-white">
                 <div>
                   <h3
-                    className="text-[#0D0C09] font-semibold text-base mb-2 group-hover:text-[#0D0C09] transition-colors"
-                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                    className="text-[#0D0C09] font-bold text-base mb-2 font-['Space_Grotesk']"
                   >
                     {s.title}
                   </h3>
-                  <p className="text-[#4A453A] text-sm leading-relaxed">{s.desc}</p>
+                  <p className="text-[#4A453A] text-sm leading-relaxed font-medium">{s.desc}</p>
                 </div>
-                <div className="mt-5 pt-3 border-t border-[rgba(22,20,14,0.11)] flex items-center justify-between text-xs font-mono text-[#4A453A]">
-                  <span className="text-[#C0EB3A] font-medium">Enterprise Pipeline</span>
-                  <span>Active Ready</span>
+                <div className="mt-5 pt-3 border-t border-[rgba(22,20,14,0.11)] flex items-center justify-between text-xs font-mono">
+                  <span className="text-[#059669] font-bold">Enterprise Pipeline</span>
+                  <span className="text-[#6B6557] font-semibold">Active Ready</span>
                 </div>
               </div>
             </InteractiveCard>

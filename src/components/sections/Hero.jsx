@@ -53,15 +53,15 @@ export const Hero = ({ onOpenContact }) => {
               <div className="mt-7 pt-5 border-t border-[rgba(22,20,14,0.11)] grid grid-cols-3 gap-4 sm:gap-8 w-full max-w-md">
                 <div>
                   <div className="text-xl sm:text-2xl font-bold text-[#0D0C09] font-mono">99.8%</div>
-                  <div className="text-[11px] text-[#756F62] mt-0.5 font-mono uppercase tracking-wider">Extraction Accuracy</div>
+                  <div className="text-[11px] text-[#4A453A] mt-0.5 font-mono uppercase tracking-wider">Extraction Accuracy</div>
                 </div>
                 <div>
                   <div className="text-xl sm:text-2xl font-bold text-[#0D0C09] font-mono">&lt;250ms</div>
-                  <div className="text-[11px] text-[#756F62] mt-0.5 font-mono uppercase tracking-wider">Processing Latency</div>
+                  <div className="text-[11px] text-[#4A453A] mt-0.5 font-mono uppercase tracking-wider">Processing Latency</div>
                 </div>
                 <div>
                   <div className="text-xl sm:text-2xl font-bold text-[#0D0C09] font-mono">100%</div>
-                  <div className="text-[11px] text-[#756F62] mt-0.5 font-mono uppercase tracking-wider">Audit Trail Logged</div>
+                  <div className="text-[11px] text-[#4A453A] mt-0.5 font-mono uppercase tracking-wider">Audit Trail Logged</div>
                 </div>
               </div>
             </Reveal>
@@ -73,7 +73,7 @@ export const Hero = ({ onOpenContact }) => {
               <div className="w-full max-w-[480px] sm:max-w-[520px] lg:max-w-[560px] aspect-square flex items-center justify-center select-none">
                 <ThreePhotoSphere />
               </div>
-              <div className="mt-1 text-center text-xs font-mono text-[#756F62] flex items-center justify-center gap-2">
+              <div className="mt-1 text-center text-xs font-mono text-[#4A453A] flex items-center justify-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#16140E]" />
                 <span>Global Indian Engineering Hubs & Partner Capital Arcs</span>
               </div>

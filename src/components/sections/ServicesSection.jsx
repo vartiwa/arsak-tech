@@ -38,7 +38,7 @@ export const ServicesSection = ({ onOpenContact }) => (
                 </div>
                 <div className="mt-5 pt-3 border-t border-[rgba(22,20,14,0.11)] flex items-center justify-between text-xs font-mono text-[#4A453A]">
                   <span className="text-[#C0EB3A]">Request Blueprint</span>
-                  <ArrowUpRight size={13} className="text-[#756F62] group-hover:text-[#C0EB3A] transition-colors" />
+                  <ArrowUpRight size={13} className="text-[#4A453A] group-hover:text-[#C0EB3A] transition-colors" />
                 </div>
               </div>
             </InteractiveCard>
