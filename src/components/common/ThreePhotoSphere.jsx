@@ -178,7 +178,7 @@ export const ThreePhotoSphere = () => {
     // 1. Scene & Camera
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 1000);
-    camera.position.z = 6.4;
+    camera.position.z = 5.5;
 
     // 2. High-Precision WebGL Renderer
     const renderer = new THREE.WebGLRenderer({
@@ -242,7 +242,7 @@ export const ThreePhotoSphere = () => {
     const earthGroup = new THREE.Group();
     scene.add(earthGroup);
 
-    const globeRadius = 1.95;
+    const globeRadius = 1.82;
     const sunDirection = new THREE.Vector3(1.3, 0.4, 0.75).normalize();
 
     // --- LAYER 1: Photorealistic Earth Surface ---
