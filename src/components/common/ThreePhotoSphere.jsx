@@ -178,7 +178,7 @@ export const ThreePhotoSphere = () => {
     // 1. Scene & Camera
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 1000);
-    camera.position.z = 6.6;
+    camera.position.z = 5.2;
 
     // 2. High-Precision WebGL Renderer
     const renderer = new THREE.WebGLRenderer({
@@ -243,7 +243,7 @@ export const ThreePhotoSphere = () => {
     const earthGroup = new THREE.Group();
     scene.add(earthGroup);
 
-    const globeRadius = 2.05;
+    const globeRadius = 2.25;
     const sunDirection = new THREE.Vector3(1.3, 0.4, 0.75).normalize();
 
     // --- LAYER 1: Photorealistic Earth Surface ---
@@ -681,7 +681,7 @@ export const ThreePhotoSphere = () => {
   }, []);
 
   return (
-    <div className="relative w-full aspect-square max-w-[460px] sm:max-w-[480px] lg:max-w-[500px] mx-auto flex items-center justify-center select-none">
+    <div className="relative w-full aspect-square max-w-[560px] sm:max-w-[620px] lg:max-w-[680px] xl:max-w-[740px] mx-auto flex items-center justify-center select-none">
       {/* Cosmic Nebula Backlight */}
       <div
         className="absolute inset-0 rounded-full opacity-60 blur-3xl pointer-events-none -z-0"

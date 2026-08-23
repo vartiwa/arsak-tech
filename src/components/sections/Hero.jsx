@@ -10,7 +10,7 @@ export const Hero = ({ onOpenContact }) => {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Editorial Value Proposition */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
+          <div className="lg:col-span-6 flex flex-col items-start text-left">
             <Reveal>
               <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-[rgba(22,20,14,0.12)] bg-[#EFECE4] mb-6 text-xs font-mono text-[#10160A] font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#10160A] shadow-sm animate-pulse" />
@@ -19,9 +19,7 @@ export const Hero = ({ onOpenContact }) => {
             </Reveal>
 
             <Reveal delay={0.04}>
-              <h1
-                className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-[#16140E] tracking-[-0.035em] leading-[1.08] max-w-2xl"
-              >
+              <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-bold text-[#16140E] tracking-[-0.035em] leading-[1.08] max-w-2xl font-['Space_Grotesk']" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                 Intelligent Software & Automation Pipelines for Growing Enterprises.
               </h1>
             </Reveal>
@@ -70,9 +68,9 @@ export const Hero = ({ onOpenContact }) => {
           </div>
 
           {/* Right Column: Centerpiece 3D Photorealistic Interactive Earth Globe */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
+          <div className="lg:col-span-6 flex flex-col items-center justify-center relative">
             <Reveal delay={0.06}>
-              <div className="relative w-full aspect-square max-w-[460px] sm:max-w-[480px] mx-auto flex items-center justify-center select-none">
+              <div className="relative w-full aspect-square max-w-[560px] sm:max-w-[620px] lg:max-w-[680px] mx-auto flex items-center justify-center select-none">
                 <ThreePhotoSphere />
               </div>
               <div className="mt-2 text-center text-xs font-mono text-[#7A756B] flex items-center justify-center gap-2">

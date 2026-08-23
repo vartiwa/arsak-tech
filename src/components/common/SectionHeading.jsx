@@ -14,10 +14,7 @@ export const SectionHeading = ({ eyebrow, title, sub, center = false, accent = "
       </Reveal>
     )}
     <Reveal delay={0.04}>
-      <h2
-        className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#16140E] tracking-tight leading-[1.18]"
-        style={{ letterSpacing: "-0.03em" }}
-      >
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#16140E] tracking-tight leading-[1.18] font-['Space_Grotesk']" style={{ fontFamily: "'Space Grotesk', sans-serif", letterSpacing: "-0.03em" }}>
         {title}
       </h2>
     </Reveal>
