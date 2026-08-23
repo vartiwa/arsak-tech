@@ -22,17 +22,22 @@ export const Nav = ({ onOpenContact }) => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-200 bg-[#FBF9F4]/95 backdrop-blur-md border-b border-[rgba(22,20,14,0.12)] ${
-        scrolled ? "py-3 shadow-[0_4px_16px_-4px_rgba(22,20,14,0.06)]" : "py-3.5 sm:py-4 shadow-sm"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-200 bg-[#FAF7F0]/95 backdrop-blur-md border-b border-[rgba(22,20,14,0.11)] ${
+        scrolled
+          ? "py-3 shadow-[0_8px_20px_-6px_rgba(22,20,14,0.08)]"
+          : "py-3.5 sm:py-4 shadow-sm"
       }`}
     >
-      {/* Subtle Bottom Specular Line */}
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[rgba(22,20,14,0.06)] to-transparent pointer-events-none" />
+      {/* Top Specular Line */}
+      <div className="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none" />
+
+      {/* Bottom Separation Line Accent */}
+      <div className="absolute inset-x-0 bottom-0 h-px bg-[rgba(22,20,14,0.06)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
-        {/* Brand Logo in Clean Beige Container */}
+        {/* Brand Logo in High-Contrast Container with Depth */}
         <a href="#" className="flex items-center select-none group">
-          <div className="bg-white hover:bg-[#F4F0E8] transition-all px-3.5 py-1.5 rounded-xl border border-[rgba(22,20,14,0.1)] shadow-sm flex items-center justify-center">
+          <div className="bg-white hover:bg-[#FAF7F0] transition-all px-3.5 py-1.5 rounded-xl border border-[rgba(22,20,14,0.12)] shadow-[0_2px_8px_-2px_rgba(22,20,14,0.08),inset_0_1px_0_rgba(255,255,255,1)] flex items-center justify-center">
             <img
               src="/logo.png"
               alt="Arsak Technologies Logo"
@@ -41,33 +46,33 @@ export const Nav = ({ onOpenContact }) => {
           </div>
         </a>
 
-        {/* Middle Navigation */}
+        {/* Middle Navigation - High Contrast Charcoal */}
         <nav className="hidden md:flex items-center gap-7" aria-label="Main Navigation">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-[13.5px] font-medium text-[#5C584E] hover:text-[#16140E] transition-colors"
+              className="text-[13.5px] font-semibold text-[#4A453A] hover:text-[#0D0C09] transition-colors"
             >
               {item.label}
             </a>
           ))}
         </nav>
 
-        {/* Right CTA Button - Pleurat Lime Pill */}
+        {/* Right CTA Button - Physical Depth Electric Lime Pill */}
         <div className="hidden md:block">
           <button
             onClick={onOpenContact}
-            className="btn-lime inline-flex items-center justify-center text-xs font-semibold px-5 py-2.5 rounded-full cursor-pointer gap-1.5"
+            className="btn-lime inline-flex items-center justify-center text-xs font-bold px-5 py-2.5 rounded-full cursor-pointer gap-1.5"
           >
             <span>Book a Demo</span>
-            <ArrowUpRight size={14} />
+            <ArrowUpRight size={14} strokeWidth={2.5} />
           </button>
         </div>
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden text-[#5C584E] hover:text-[#16140E] p-1 rounded-md focus:outline-none"
+          className="md:hidden text-[#4A453A] hover:text-[#0D0C09] p-1 rounded-md focus:outline-none"
           onClick={() => setOpen(!open)}
           aria-label="Toggle navigation menu"
           aria-expanded={open}
@@ -84,14 +89,14 @@ export const Nav = ({ onOpenContact }) => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden bg-[#FBF9F4] border-b border-[rgba(22,20,14,0.1)] px-6 py-5 flex flex-col gap-4 shadow-xl"
+            className="md:hidden overflow-hidden bg-[#FAF7F0] border-b border-[rgba(22,20,14,0.12)] px-6 py-5 flex flex-col gap-4 shadow-2xl"
           >
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="text-[#5C584E] hover:text-[#16140E] text-base py-1 transition-colors font-medium"
+                className="text-[#4A453A] hover:text-[#0D0C09] text-base py-1 transition-colors font-semibold"
               >
                 {item.label}
               </a>
@@ -101,7 +106,7 @@ export const Nav = ({ onOpenContact }) => {
                 setOpen(false);
                 onOpenContact();
               }}
-              className="btn-lime mt-2 inline-flex justify-center items-center text-sm font-semibold px-5 py-2.5 rounded-full"
+              className="btn-lime mt-2 inline-flex justify-center items-center text-sm font-bold px-5 py-2.5 rounded-full"
             >
               Book a Demo
             </button>

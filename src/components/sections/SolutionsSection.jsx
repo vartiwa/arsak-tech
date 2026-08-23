@@ -14,7 +14,7 @@ const ACCENT_GLOWS = {
 };
 
 export const SolutionsSection = () => (
-  <section id="solutions" className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.08)] relative">
+  <section id="solutions" className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] relative">
     <div className="max-w-6xl mx-auto px-6 md:px-8">
       <SectionHeading
         eyebrow="Solutions"
@@ -27,11 +27,11 @@ export const SolutionsSection = () => (
           <Reveal key={s.title} delay={i * 0.05}>
             <InteractiveCard accentColor={ACCENT_GLOWS[s.accent] || "rgba(59, 130, 246, 0.16)"} className="h-full">
               {/* TOP COMPARTMENT (Header with Icon/Visual Box as per Sketch) */}
-              <div className="p-5 bg-[#EFECE4] border-b border-[rgba(22,20,14,0.09)] flex items-center justify-between">
+              <div className="p-5 bg-[#EFECE3] shadow-[inset_0_2px_4px_rgba(22,20,14,0.03)] border-b border-[rgba(22,20,14,0.11)] flex items-center justify-between">
                 <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${ACCENT[s.accent].border} ${ACCENT[s.accent].bg} shadow-inner`}>
                   <s.icon size={20} className={ACCENT[s.accent].text} />
                 </div>
-                <div className="flex items-center gap-1.5 text-xs font-mono text-[#5C584E] group-hover:text-[#C0EB3A] transition-colors">
+                <div className="flex items-center gap-1.5 text-xs font-mono text-[#4A453A] group-hover:text-[#C0EB3A] transition-colors">
                   <span>Module 0{i + 1}</span>
                   <ArrowUpRight size={14} className="opacity-60 group-hover:opacity-100 transition-opacity" />
                 </div>
@@ -41,14 +41,14 @@ export const SolutionsSection = () => (
               <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-white">
                 <div>
                   <h3
-                    className="text-[#16140E] font-semibold text-base mb-2 group-hover:text-[#16140E] transition-colors"
+                    className="text-[#0D0C09] font-semibold text-base mb-2 group-hover:text-[#0D0C09] transition-colors"
                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                   >
                     {s.title}
                   </h3>
-                  <p className="text-[#5C584E] text-sm leading-relaxed">{s.desc}</p>
+                  <p className="text-[#4A453A] text-sm leading-relaxed">{s.desc}</p>
                 </div>
-                <div className="mt-5 pt-3 border-t border-[rgba(22,20,14,0.08)] flex items-center justify-between text-xs font-mono text-[#5C584E]">
+                <div className="mt-5 pt-3 border-t border-[rgba(22,20,14,0.11)] flex items-center justify-between text-xs font-mono text-[#4A453A]">
                   <span className="text-[#C0EB3A] font-medium">Enterprise Pipeline</span>
                   <span>Active Ready</span>
                 </div>

@@ -1,23 +1,25 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 
 export const InteractiveCard = ({
   children,
   className = "",
-  accentColor = "rgba(192, 235, 58, 0.2)",
   ...props
 }) => {
   return (
     <div
-      className={`relative group rounded-2xl transition-all duration-300 transform-gpu hover:-translate-y-1.5 overflow-hidden flex flex-col bg-white border border-[rgba(22,20,14,0.09)] shadow-[0_4px_20px_-4px_rgba(22,20,14,0.05),0_1px_3px_rgba(22,20,14,0.03)] hover:shadow-[0_16px_36px_-6px_rgba(22,20,14,0.10),0_2px_8px_rgba(22,20,14,0.04)] hover:border-[rgba(22,20,14,0.20)] ${className}`}
+      className={`relative group rounded-2xl transition-all duration-300 transform-gpu hover:-translate-y-2 overflow-hidden flex flex-col bg-white border border-[rgba(22,20,14,0.11)] shadow-[0_8px_24px_-6px_rgba(22,20,14,0.07),0_2px_6px_rgba(22,20,14,0.03)] hover:shadow-[0_24px_50px_-10px_rgba(22,20,14,0.14),0_6px_16px_rgba(22,20,14,0.06)] hover:border-[rgba(22,20,14,0.25)] ${className}`}
       {...props}
     >
-      {/* Top Specular Bezel Horizon */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-white to-transparent z-20" />
+      {/* 1. Top Specular Glaze Sheen */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-white/90 to-transparent z-20" />
 
-      {/* Bottom 3D Physical Shelf Lip (Sketched Double Base in Warm Linen) */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r from-[#EAE5D9] via-[#E2DDD0] to-[#EAE5D9] border-t border-[#DFD9CB] z-20" />
+      {/* 2. Bottom 3D Physical Shelf Base (Multi-Level Shading) */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[3.5px] bg-gradient-to-r from-[#E5DFD1] via-[#D8D1C1] to-[#E5DFD1] border-t border-[#D0C8B7] z-20 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]" />
 
-      {/* Card Content Surface */}
+      {/* 3. Outer Inner Specular Rim */}
+      <div className="pointer-events-none absolute inset-0 rounded-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,1),inset_0_-1px_1px_rgba(22,20,14,0.04)] z-20" />
+
+      {/* 4. Card Content Surface */}
       <div className="relative z-10 h-full w-full flex flex-col">
         {children}
       </div>

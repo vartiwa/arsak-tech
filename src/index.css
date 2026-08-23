@@ -4,27 +4,29 @@
 
 @layer base {
   :root {
-    --bg: #FBF9F4;
+    --bg: #FAF7F0;
     --paper: #FFFFFF;
-    --paper-beige: #F4F0E8;
-    --paper-header: #EFECE4;
-    --lime: #C0EB3A;
-    --lime-hover: #B0DD28;
-    --lime-deep: #14170E;
-    --amber: #F3B44A;
-    --ink: #16140E;
-    --ink-2: #3E3B33;
-    --ink-3: #6B675E;
-    --ink-4: #9A958A;
-    --line: rgba(22, 20, 14, 0.09);
+    --paper-header: #EFECE3;
+    --paper-header-inner: #E8E3D7;
+    --lime: #BCEB28;
+    --lime-hover: #AAdb1e;
+    --lime-deep: #0D1204;
+    --amber: #D97706;
+    --cobalt: #2563EB;
+    --emerald: #059669;
+    --ink: #0D0C09;
+    --ink-2: #38342B;
+    --ink-3: #5C574B;
+    --ink-4: #8A8475;
+    --line: rgba(22, 20, 14, 0.11);
     --line-subtle: rgba(22, 20, 14, 0.05);
   }
 
   html, body, #root {
     min-height: 100%;
     margin: 0;
-    background: #FBF9F4;
-    color: #16140E;
+    background: #FAF7F0;
+    color: #0D0C09;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -32,7 +34,8 @@
 
   h1, h2, h3, h4, h5, h6, .font-heading {
     font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.035em;
+    color: #0D0C09;
   }
 
   * {
@@ -40,8 +43,8 @@
   }
 
   ::selection {
-    background: #C0EB3A;
-    color: #14170E;
+    background: #BCEB28;
+    color: #0D1204;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -53,42 +56,53 @@
   }
 
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-    outline: 2px solid #C0EB3A;
+    outline: 2px solid #BCEB28;
     outline-offset: 2px;
   }
 }
 
+/* High-Contrast Physical Button & Pill Systems */
 .btn-lime {
-  background-color: #C0EB3A;
-  color: #14170E;
-  font-weight: 600;
+  background-color: #BCEB28;
+  color: #0D1204;
+  font-weight: 700;
   border-radius: 9999px;
-  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0 4px 14px -2px rgba(192, 235, 58, 0.4);
+  border: 1px solid rgba(13, 18, 4, 0.15);
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 4px 14px -2px rgba(188, 235, 40, 0.45), 0 2px 4px rgba(13, 18, 4, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .btn-lime:hover {
-  background-color: #B2DF2A;
+  background-color: #AAdb1e;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px -3px rgba(192, 235, 58, 0.5);
+  box-shadow: 0 10px 24px -4px rgba(188, 235, 40, 0.6), 0 4px 8px rgba(13, 18, 4, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .btn-lime:active {
   transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(188, 235, 40, 0.3);
 }
 
 .btn-secondary {
   background-color: #FFFFFF;
-  color: #16140E;
-  font-weight: 500;
-  border: 1px solid rgba(22, 20, 14, 0.14);
+  color: #0D0C09;
+  font-weight: 600;
+  border: 1px solid rgba(22, 20, 14, 0.15);
   border-radius: 9999px;
-  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 3px 10px -2px rgba(22, 20, 14, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
 .btn-secondary:hover {
-  background-color: #F8F6F0;
-  border-color: rgba(22, 20, 14, 0.28);
+  background-color: #F8F5EE;
+  border-color: rgba(22, 20, 14, 0.3);
   transform: translateY(-1.5px);
-  box-shadow: 0 4px 12px -2px rgba(22, 20, 14, 0.06);
+  box-shadow: 0 8px 20px -4px rgba(22, 20, 14, 0.10), inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.depth-badge {
+  background: #EFECE3;
+  color: #0D0C09;
+  border: 1px solid rgba(22, 20, 14, 0.14);
+  box-shadow: 0 2px 6px -1px rgba(22, 20, 14, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }

@@ -22,8 +22,8 @@ const FeaturedFlow = ({ title, steps, accent, badgeAccent }) => (
             <div
               className={`text-sm rounded-xl px-4 py-3 border font-medium ${
                 accent === "orange"
-                  ? "border-[rgba(239,237,226,0.14)] bg-[#FBF9F4] text-[#5C584E]"
-                  : "border-[#C0EB3A]/30 bg-[#0E100F] text-[#16140E] shadow-sm"
+                  ? "border-[rgba(239,237,226,0.14)] bg-[#FAF7F0] text-[#4A453A]"
+                  : "border-[#C0EB3A]/30 bg-[#0E100F] text-[#0D0C09] shadow-sm"
               }`}
             >
               {s}
@@ -41,7 +41,7 @@ const FeaturedFlow = ({ title, steps, accent, badgeAccent }) => (
 );
 
 export const UseCaseSection = () => (
-  <section className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.08)] bg-transparent relative">
+  <section className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
     <div className="max-w-6xl mx-auto px-6 md:px-8">
       <SectionHeading
         title="From Manual Drag to Instant Execution"

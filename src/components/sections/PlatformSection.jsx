@@ -13,7 +13,7 @@ const LAYER_GLOWS = {
 };
 
 export const PlatformSection = () => (
-  <section id="platform" className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.08)] bg-transparent relative">
+  <section id="platform" className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
     <div className="max-w-6xl mx-auto px-6 md:px-8">
       <SectionHeading
         eyebrow="Architecture"
@@ -27,16 +27,16 @@ export const PlatformSection = () => (
           <Reveal key={layer.title} delay={i * 0.08} className="relative flex flex-col h-full">
             <InteractiveCard accentColor={LAYER_GLOWS[layer.accent] || "rgba(56, 189, 248, 0.15)"} className="h-full">
               {/* TOP COMPARTMENT (Header & Icon Box as per Sketch) */}
-              <div className="p-4 bg-[#EFECE4] border-b border-[rgba(22,20,14,0.09)] flex items-center justify-between">
+              <div className="p-4 bg-[#EFECE3] shadow-[inset_0_2px_4px_rgba(22,20,14,0.03)] border-b border-[rgba(22,20,14,0.11)] flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-lg flex items-center justify-center border border-[#C0EB3A]/30 bg-[#C0EB3A]/10 text-[#C0EB3A]">
                     <Layers size={15} />
                   </div>
-                  <h3 className="text-[#16140E] text-xs font-mono tracking-wider uppercase font-semibold">
+                  <h3 className="text-[#0D0C09] text-xs font-mono tracking-wider uppercase font-semibold">
                     {layer.title}
                   </h3>
                 </div>
-                <span className="text-[11px] font-mono text-[#5C584E]">0{i + 1}</span>
+                <span className="text-[11px] font-mono text-[#4A453A]">0{i + 1}</span>
               </div>
 
               {/* BOTTOM COMPARTMENT (Body Pipeline Items as per Sketch) */}
@@ -45,25 +45,25 @@ export const PlatformSection = () => (
                   {layer.items.map((it) => (
                     <div
                       key={it}
-                      className="text-xs text-[#5C584E] bg-[#FBF9F4] border border-[rgba(239,237,226,0.14)] rounded-lg px-3 py-2 font-medium flex items-center justify-between"
+                      className="text-xs text-[#4A453A] bg-[#FAF7F0] border border-[rgba(239,237,226,0.14)] rounded-lg px-3 py-2 font-medium flex items-center justify-between"
                     >
                       <span>{it}</span>
                       <CheckCircle2 size={12} className="text-[#C0EB3A] shrink-0" />
                     </div>
                   ))}
                 </div>
-                <div className="mt-4 pt-3 border-t border-[rgba(22,20,14,0.08)] text-[11px] font-mono text-[#5C584E]">
+                <div className="mt-4 pt-3 border-t border-[rgba(22,20,14,0.11)] text-[11px] font-mono text-[#4A453A]">
                   Active Subsystem Ready
                 </div>
               </div>
             </InteractiveCard>
             {i < LAYERS.length - 1 && (
-              <div className="hidden lg:flex absolute top-1/2 -right-3.5 -translate-y-1/2 z-20 text-[#5C584E] bg-slate-900 border border-slate-700 rounded-full p-1 shadow-md">
+              <div className="hidden lg:flex absolute top-1/2 -right-3.5 -translate-y-1/2 z-20 text-[#4A453A] bg-slate-900 border border-slate-700 rounded-full p-1 shadow-md">
                 <ChevronRight size={14} />
               </div>
             )}
             {i < LAYERS.length - 1 && (
-              <div className="lg:hidden flex justify-center my-2 text-[#5C584E]">
+              <div className="lg:hidden flex justify-center my-2 text-[#4A453A]">
                 <ChevronDown size={18} />
               </div>
             )}
