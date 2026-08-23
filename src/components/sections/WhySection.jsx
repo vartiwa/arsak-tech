@@ -25,7 +25,7 @@ export const WhySection = () => (
           <Reveal key={w.title} delay={i * 0.08}>
             <InteractiveCard accentColor={WHY_GLOWS[w.accent] || "rgba(59, 130, 246, 0.16)"} className="h-full">
               {/* TOP COMPARTMENT (Header with Icon Box as per Sketch) */}
-              <div className="p-5 bg-[#101426]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+              <div className="p-5 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
                 <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${ACCENT[w.accent].border} ${ACCENT[w.accent].bg} shadow-inner`}>
                   <w.icon size={20} className={ACCENT[w.accent].text} />
                 </div>
@@ -33,7 +33,7 @@ export const WhySection = () => (
               </div>
 
               {/* BOTTOM COMPARTMENT (Body Content as per Sketch) */}
-              <div className="p-6 flex-1 flex flex-col justify-between bg-[#070914]/95">
+              <div className="p-6 flex-1 flex flex-col justify-between bg-[#0E100F]/95">
                 <div>
                   <h3 className="text-lg font-semibold text-[#EFEDE2] mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                     {w.title}

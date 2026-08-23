@@ -27,9 +27,9 @@ export const PlatformSection = () => (
           <Reveal key={layer.title} delay={i * 0.08} className="relative flex flex-col h-full">
             <InteractiveCard accentColor={LAYER_GLOWS[layer.accent] || "rgba(56, 189, 248, 0.15)"} className="h-full">
               {/* TOP COMPARTMENT (Header & Icon Box as per Sketch) */}
-              <div className="p-4 bg-[#101426]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+              <div className="p-4 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg flex items-center justify-center border border-cyan-500/30 bg-cyan-500/10 text-cyan-400">
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center border border-[#C0EB3A]/30 bg-[#C0EB3A]/10 text-[#C0EB3A]">
                     <Layers size={15} />
                   </div>
                   <h3 className="text-[#EFEDE2] text-xs font-mono tracking-wider uppercase font-semibold">
@@ -40,15 +40,15 @@ export const PlatformSection = () => (
               </div>
 
               {/* BOTTOM COMPARTMENT (Body Pipeline Items as per Sketch) */}
-              <div className="p-5 flex-1 flex flex-col justify-between bg-[#070914]/95">
+              <div className="p-5 flex-1 flex flex-col justify-between bg-[#0E100F]/95">
                 <div className="flex flex-col gap-2">
                   {layer.items.map((it) => (
                     <div
                       key={it}
-                      className="text-xs text-[#B7B5AA] bg-[#050711] border border-[rgba(239,237,226,0.14)] rounded-lg px-3 py-2 font-medium flex items-center justify-between"
+                      className="text-xs text-[#B7B5AA] bg-[#0B0D0C] border border-[rgba(239,237,226,0.14)] rounded-lg px-3 py-2 font-medium flex items-center justify-between"
                     >
                       <span>{it}</span>
-                      <CheckCircle2 size={12} className="text-cyan-400 shrink-0" />
+                      <CheckCircle2 size={12} className="text-[#C0EB3A] shrink-0" />
                     </div>
                   ))}
                 </div>

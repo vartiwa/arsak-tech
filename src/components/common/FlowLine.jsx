@@ -5,7 +5,7 @@ export const FlowLine = ({
   length = 28,
   delay = 0,
   horizontal = false,
-  color = "#38bdf8",
+  color = "#C0EB3A",
 }) => (
   <div
     className={

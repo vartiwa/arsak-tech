@@ -4,23 +4,24 @@
 
 @layer base {
   :root {
-    --bg: #050711;
+    --bg: #0B0D0C;
     --lime: #C0EB3A;
     --lime-hover: #D4F85E;
     --lime-deep: #10160A;
+    --amber: #F3B44A;
     --ink: #EFEDE2;
     --ink-2: #B7B5AA;
     --ink-3: #7D7C72;
     --line: rgba(239, 237, 226, 0.12);
     --line-subtle: rgba(239, 237, 226, 0.06);
-    --panel-top: rgba(18, 22, 40, 0.85);
-    --panel-body: rgba(11, 14, 27, 0.95);
+    --panel-top: #151815;
+    --panel-body: #0E100F;
   }
 
   html, body, #root {
     min-height: 100%;
     margin: 0;
-    background: #050711;
+    background: #0B0D0C;
     color: #EFEDE2;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;

@@ -22,8 +22,8 @@ const FeaturedFlow = ({ title, steps, accent, badgeAccent }) => (
             <div
               className={`text-sm rounded-xl px-4 py-3 border font-medium ${
                 accent === "orange"
-                  ? "border-[rgba(239,237,226,0.14)] bg-[#050711] text-[#B7B5AA]"
-                  : "border-cyan-500/30 bg-[#080b18] text-[#EFEDE2] shadow-sm"
+                  ? "border-[rgba(239,237,226,0.14)] bg-[#0B0D0C] text-[#B7B5AA]"
+                  : "border-[#C0EB3A]/30 bg-[#0E100F] text-[#EFEDE2] shadow-sm"
               }`}
             >
               {s}

@@ -24,7 +24,7 @@ export const Nav = ({ onOpenContact }) => {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-200 ${
         scrolled
-          ? "bg-[#050711]/92 backdrop-blur-md border-b border-[rgba(239,237,226,0.1)] shadow-lg py-3"
+          ? "bg-[#0B0D0C]/94 backdrop-blur-md border-b border-[rgba(239,237,226,0.1)] shadow-lg py-3"
           : "bg-transparent border-b border-transparent py-4 sm:py-5"
       }`}
     >
@@ -83,7 +83,7 @@ export const Nav = ({ onOpenContact }) => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden bg-[#050711] border-b border-[rgba(239,237,226,0.12)] px-6 py-5 flex flex-col gap-4 shadow-xl"
+            className="md:hidden overflow-hidden bg-[#0B0D0C] border-b border-[rgba(239,237,226,0.12)] px-6 py-5 flex flex-col gap-4 shadow-xl"
           >
             {NAV_ITEMS.map((item) => (
               <a

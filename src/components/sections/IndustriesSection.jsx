@@ -40,7 +40,7 @@ export const IndustriesSection = () => (
           <Reveal key={ind.title} delay={i * 0.05}>
             <InteractiveCard accentColor="rgba(245, 158, 11, 0.14)" className="h-full">
               {/* TOP COMPARTMENT (Header Visual as per Sketch) */}
-              <div className="p-4 bg-[#101426]/90 border-b border-[rgba(239,237,226,0.12)] flex flex-col gap-2.5">
+              <div className="p-4 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex flex-col gap-2.5">
                 <IndustryVisual accent={ind.accent} />
                 <div className="flex items-center justify-between">
                   <div className={`w-8 h-8 rounded-lg flex items-center justify-center border ${ACCENT[ind.accent].border} ${ACCENT[ind.accent].bg}`}>
@@ -51,9 +51,9 @@ export const IndustriesSection = () => (
               </div>
 
               {/* BOTTOM COMPARTMENT (Body Title & Details as per Sketch) */}
-              <div className="p-5 flex-1 flex flex-col justify-between bg-[#070914]/95">
+              <div className="p-5 flex-1 flex flex-col justify-between bg-[#0E100F]/95">
                 <div>
-                  <h3 className="text-[#EFEDE2] text-base font-semibold mb-1 group-hover:text-cyan-200 transition-colors">
+                  <h3 className="text-[#EFEDE2] text-base font-semibold mb-1 group-hover:text-[#EFEDE2] transition-colors">
                     {ind.title}
                   </h3>
                   <p className="text-xs text-[#B7B5AA] leading-relaxed">
@@ -61,7 +61,7 @@ export const IndustriesSection = () => (
                   </p>
                 </div>
                 <div className="mt-4 pt-3 border-t border-[rgba(239,237,226,0.08)] flex items-center justify-between text-xs font-mono text-[#B7B5AA]">
-                  <span className="text-cyan-400 font-medium">Enterprise Sector</span>
+                  <span className="text-[#C0EB3A] font-medium">Enterprise Sector</span>
                   <ArrowUpRight size={13} className="text-[#7D7C72]" />
                 </div>
               </div>
@@ -75,13 +75,13 @@ export const IndustriesSection = () => (
         {INDUSTRIES_COMPACT.map((ind, i) => (
           <Reveal key={ind.title} delay={i * 0.04}>
             <InteractiveCard accentColor="rgba(148, 163, 184, 0.10)" className="h-full">
-              <div className="p-3.5 bg-[#101426]/80 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+              <div className="p-3.5 bg-[#151815]/80 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
                 <div className="w-7 h-7 rounded-lg flex items-center justify-center border border-slate-700 bg-slate-800/80 text-[#B7B5AA]">
                   <ind.icon size={14} />
                 </div>
                 <span className="text-[10px] font-mono text-[#B7B5AA]">Industry</span>
               </div>
-              <div className="p-3.5 bg-[#070914]/95">
+              <div className="p-3.5 bg-[#0E100F]/95">
                 <span className="text-slate-200 text-sm font-semibold">{ind.title}</span>
               </div>
             </InteractiveCard>

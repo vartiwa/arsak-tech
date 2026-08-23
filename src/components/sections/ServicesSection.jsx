@@ -19,17 +19,17 @@ export const ServicesSection = ({ onOpenContact }) => (
           <Reveal key={s} delay={i * 0.05}>
             <InteractiveCard accentColor="rgba(56, 189, 248, 0.14)" className="h-full cursor-pointer" onClick={onOpenContact}>
               {/* TOP COMPARTMENT (Header with Icon Box as per Sketch) */}
-              <div className="p-5 bg-[#101426]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center border border-blue-500/30 bg-blue-500/10 shadow-inner text-blue-400">
+              <div className="p-5 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center border border-blue-500/30 bg-blue-500/10 shadow-inner text-[#F3B44A]">
                   <Layers size={18} />
                 </div>
                 <span className="text-xs font-mono text-[#B7B5AA]">Service 0{i + 1}</span>
               </div>
 
               {/* BOTTOM COMPARTMENT (Body Content as per Sketch) */}
-              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-[#070914]/95">
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-[#0E100F]/95">
                 <div>
-                  <h3 className="text-lg font-semibold text-[#EFEDE2] group-hover:text-cyan-200 transition-colors mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  <h3 className="text-lg font-semibold text-[#EFEDE2] group-hover:text-[#EFEDE2] transition-colors mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                     {s}
                   </h3>
                   <p className="text-xs text-[#B7B5AA] leading-relaxed">
@@ -37,8 +37,8 @@ export const ServicesSection = ({ onOpenContact }) => (
                   </p>
                 </div>
                 <div className="mt-5 pt-3 border-t border-[rgba(239,237,226,0.08)] flex items-center justify-between text-xs font-mono text-[#B7B5AA]">
-                  <span className="text-cyan-400">Request Blueprint</span>
-                  <ArrowUpRight size={13} className="text-[#7D7C72] group-hover:text-cyan-300 transition-colors" />
+                  <span className="text-[#C0EB3A]">Request Blueprint</span>
+                  <ArrowUpRight size={13} className="text-[#7D7C72] group-hover:text-[#C0EB3A] transition-colors" />
                 </div>
               </div>
             </InteractiveCard>

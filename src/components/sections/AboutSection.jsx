@@ -21,14 +21,14 @@ export const AboutSection = () => (
         <div className="grid sm:grid-cols-2 gap-6">
           <InteractiveCard accentColor="rgba(129, 140, 248, 0.16)" className="h-full">
             {/* Top Header Compartment */}
-            <div className="p-4 bg-[#101426]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+            <div className="p-4 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center border border-indigo-500/30 bg-indigo-500/10 text-indigo-400">
                 <Compass size={18} />
               </div>
               <span className="text-xs font-mono text-indigo-400 font-semibold">Our Vision</span>
             </div>
             {/* Bottom Body Compartment */}
-            <div className="p-5 sm:p-6 bg-[#070914]/95 flex-1 flex flex-col justify-between">
+            <div className="p-5 sm:p-6 bg-[#0E100F]/95 flex-1 flex flex-col justify-between">
               <p className="text-[#B7B5AA] text-sm leading-relaxed">
                 Make enterprise-grade AI and intelligent process automation accessible, transparent, and seamless for growing organizations worldwide.
               </p>
@@ -40,14 +40,14 @@ export const AboutSection = () => (
 
           <InteractiveCard accentColor="rgba(56, 189, 248, 0.16)" className="h-full">
             {/* Top Header Compartment */}
-            <div className="p-4 bg-[#101426]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center border border-blue-500/30 bg-blue-500/10 text-blue-400">
+            <div className="p-4 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center border border-blue-500/30 bg-blue-500/10 text-[#F3B44A]">
                 <Target size={18} />
               </div>
-              <span className="text-xs font-mono text-blue-400 font-semibold">Our Mission</span>
+              <span className="text-xs font-mono text-[#F3B44A] font-semibold">Our Mission</span>
             </div>
             {/* Bottom Body Compartment */}
-            <div className="p-5 sm:p-6 bg-[#070914]/95 flex-1 flex flex-col justify-between">
+            <div className="p-5 sm:p-6 bg-[#0E100F]/95 flex-1 flex flex-col justify-between">
               <p className="text-[#B7B5AA] text-sm leading-relaxed">
                 Build dependable software systems that connect fragmented applications and eliminate administrative friction forever.
               </p>

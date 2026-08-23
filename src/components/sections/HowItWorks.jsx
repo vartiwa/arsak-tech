@@ -20,7 +20,7 @@ export const HowItWorks = () => (
           <Reveal key={s.n} delay={i * 0.06} className="relative flex flex-col h-full">
             <InteractiveCard accentColor="rgba(56, 189, 248, 0.14)" className="p-5 flex flex-col justify-between h-full">
               <div>
-                <span className="text-xs font-mono text-cyan-400 border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 rounded inline-block mb-3">
+                <span className="text-xs font-mono text-[#C0EB3A] border border-[#C0EB3A]/30 bg-[#C0EB3A]/10 px-2 py-0.5 rounded inline-block mb-3">
                   Step {s.n}
                 </span>
                 <h3

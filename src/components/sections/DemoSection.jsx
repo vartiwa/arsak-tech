@@ -82,7 +82,7 @@ export const DemoSection = () => {
                     <span className="text-purple-400 font-medium">const</span>
                     <span className="text-[#EFEDE2] ml-2 font-medium">workflow</span>
                     <span className="text-purple-400 ml-2 font-medium">=</span>
-                    <span className="text-cyan-400 ml-2 font-semibold">createPipeline</span>
+                    <span className="text-[#C0EB3A] ml-2 font-semibold">createPipeline</span>
                     <span className="text-pink-400 font-medium">(</span>
                     <span className="text-pink-300 font-medium">source</span>
                     <span className="text-pink-400 font-medium">)</span>
@@ -91,7 +91,7 @@ export const DemoSection = () => {
                     // AI Extraction · Validation · Routing
                   </div>
                   <div className="flex flex-wrap items-center">
-                    <span className="text-sky-400 font-medium">deploy</span>
+                    <span className="text-[#C0EB3A] font-medium">deploy</span>
                     <span className="text-[#EFEDE2] font-medium">(</span>
                     <span className="text-[#EFEDE2] font-medium">workflow</span>
                     <span className="text-[#EFEDE2] font-medium">)</span>
@@ -103,10 +103,10 @@ export const DemoSection = () => {
               </div>
 
               {/* Inset Multi-Bar Chart Box with Interactive Hover Depth */}
-              <div className="rounded-xl border border-[rgba(239,237,226,0.14)] bg-[#050711] p-5 sm:p-6 mt-auto shadow-inner">
+              <div className="rounded-xl border border-[rgba(239,237,226,0.14)] bg-[#0B0D0C] p-5 sm:p-6 mt-auto shadow-inner">
                 <div className="flex items-center justify-between mb-3 text-xs font-mono text-[#B7B5AA]">
                   <span className="flex items-center gap-1.5">
-                    <Cpu size={13} className="text-cyan-400" /> Pipeline Throughput Telemetry
+                    <Cpu size={13} className="text-[#C0EB3A]" /> Pipeline Throughput Telemetry
                   </span>
                   <span className="text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded">
                     Real-time (60 FPS)
@@ -126,7 +126,7 @@ export const DemoSection = () => {
                         {/* Interactive Tooltip on Hover */}
                         {isHovered && (
                           <div className="absolute -top-11 bg-slate-900/95 border border-slate-700 text-[#EFEDE2] text-[11px] font-mono px-2.5 py-1 rounded shadow-xl whitespace-nowrap z-30 pointer-events-none transform -translate-y-1 transition-all">
-                            <div className="font-semibold text-cyan-300">{bar.label}</div>
+                            <div className="font-semibold text-[#C0EB3A]">{bar.label}</div>
                             <div className="text-[#B7B5AA] text-[10px]">{bar.value} · {bar.latency}</div>
                           </div>
                         )}
@@ -158,7 +158,7 @@ export const DemoSection = () => {
               <div>
                 <div className="flex items-center justify-between mb-5 pb-3 border-b border-[rgba(239,237,226,0.12)]">
                   <div className="flex items-center gap-2 text-xs font-mono text-[#B7B5AA]">
-                    <Terminal size={14} className="text-cyan-400" />
+                    <Terminal size={14} className="text-[#C0EB3A]" />
                     <span>payload.extracted.json</span>
                   </div>
                   <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded">
@@ -166,14 +166,14 @@ export const DemoSection = () => {
                   </span>
                 </div>
 
-                <div className="bg-[#050711] border border-[rgba(239,237,226,0.14)] rounded-xl p-4 font-mono text-xs text-[#B7B5AA] space-y-2.5 shadow-inner">
+                <div className="bg-[#0B0D0C] border border-[rgba(239,237,226,0.14)] rounded-xl p-4 font-mono text-xs text-[#B7B5AA] space-y-2.5 shadow-inner">
                   <div className="flex justify-between items-center py-0.5 border-b border-slate-900/60">
                     <span className="text-[#7D7C72]">customer_entity:</span>
                     <span className="text-[#EFEDE2] font-medium">"ABC Industries Ltd."</span>
                   </div>
                   <div className="flex justify-between items-center py-0.5 border-b border-slate-900/60">
                     <span className="text-[#7D7C72]">document_id:</span>
-                    <span className="text-cyan-300">"#INV-2048-HQ"</span>
+                    <span className="text-[#C0EB3A]">"#INV-2048-HQ"</span>
                   </div>
                   <div className="flex justify-between items-center py-0.5 border-b border-slate-900/60">
                     <span className="text-[#7D7C72]">verified_items:</span>
@@ -217,7 +217,7 @@ export const DemoSection = () => {
           <Reveal delay={0.10} className="lg:col-span-4">
             <InteractiveCard accentColor="rgba(59, 130, 246, 0.15)" className="p-6 flex flex-col justify-between h-full">
               <div className="flex items-center justify-between text-xs font-mono text-[#B7B5AA] mb-4">
-                <span className="flex items-center gap-1.5 text-blue-400">
+                <span className="flex items-center gap-1.5 text-[#F3B44A]">
                   <Activity size={14} /> telemetry.metrics
                 </span>
                 <ArrowUpRight size={14} className="text-[#7D7C72]" />
@@ -248,19 +248,19 @@ export const DemoSection = () => {
                 <span className="text-[10px] text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-800/50">99.9% Uptime</span>
               </div>
               <div className="space-y-2 text-xs font-mono">
-                <div className="flex items-center justify-between p-2 rounded-lg bg-[#050711] border border-[rgba(239,237,226,0.12)] hover:border-slate-700 transition-colors">
+                <div className="flex items-center justify-between p-2 rounded-lg bg-[#0B0D0C] border border-[rgba(239,237,226,0.12)] hover:border-slate-700 transition-colors">
                   <span className="text-[#B7B5AA]">SAP / Oracle ERP</span>
                   <span className="text-emerald-400 flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> 12ms
                   </span>
                 </div>
-                <div className="flex items-center justify-between p-2 rounded-lg bg-[#050711] border border-[rgba(239,237,226,0.12)] hover:border-slate-700 transition-colors">
+                <div className="flex items-center justify-between p-2 rounded-lg bg-[#0B0D0C] border border-[rgba(239,237,226,0.12)] hover:border-slate-700 transition-colors">
                   <span className="text-[#B7B5AA]">Salesforce / CRM</span>
                   <span className="text-emerald-400 flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> 18ms
                   </span>
                 </div>
-                <div className="flex items-center justify-between p-2 rounded-lg bg-[#050711] border border-[rgba(239,237,226,0.12)] hover:border-slate-700 transition-colors">
+                <div className="flex items-center justify-between p-2 rounded-lg bg-[#0B0D0C] border border-[rgba(239,237,226,0.12)] hover:border-slate-700 transition-colors">
                   <span className="text-[#B7B5AA]">PostgreSQL / Cloud</span>
                   <span className="text-emerald-400 flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> 8ms
@@ -291,7 +291,7 @@ export const DemoSection = () => {
               </div>
               <div className="mt-4 pt-3 border-t border-[rgba(239,237,226,0.08)] flex items-center justify-between text-xs font-mono text-[#B7B5AA]">
                 <span>Weekly Resolves:</span>
-                <span className="text-cyan-400 font-bold">1,284 Tasks</span>
+                <span className="text-[#C0EB3A] font-bold">1,284 Tasks</span>
               </div>
             </InteractiveCard>
           </Reveal>

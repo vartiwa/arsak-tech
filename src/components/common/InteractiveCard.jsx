@@ -31,7 +31,7 @@ export const InteractiveCard = ({
       className={`relative group rounded-2xl transition-all duration-300 transform-gpu hover:-translate-y-1.5 overflow-hidden flex flex-col ${className}`}
       style={{
         background:
-          "linear-gradient(180deg, rgba(18, 22, 40, 0.90) 0%, rgba(11, 14, 27, 0.98) 50%, rgba(7, 9, 18, 1) 100%)",
+          "linear-gradient(180deg, #151815 0%, #0E100F 50%, #080A09 100%)",
         boxShadow:
           "0 18px 45px -10px rgba(0, 0, 0, 0.9), 0 4px 12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(239, 237, 226, 0.12), inset 0 -3px 0 rgba(0, 0, 0, 0.9), inset 1px 0 0 rgba(239, 237, 226, 0.03), inset -1px 0 0 rgba(239, 237, 226, 0.03)",
       }}
@@ -47,13 +47,13 @@ export const InteractiveCard = ({
       />
 
       {/* 2. Top Specular Bezel Horizon */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-[rgba(239,237,226,0.22)] to-transparent z-20 group-hover:via-[#C0EB3A]/40 transition-all duration-300" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-[rgba(239,237,226,0.20)] to-transparent z-20 group-hover:via-[#C0EB3A]/40 transition-all duration-300" />
 
       {/* 3. Physical Outer Border */}
       <div className="pointer-events-none absolute inset-0 rounded-2xl border border-[rgba(239,237,226,0.12)] group-hover:border-[rgba(192,235,58,0.4)] transition-colors z-20 shadow-sm" />
 
       {/* 4. Bottom 3D Physical Shelf Lip (Sketched Double Base) */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r from-[#070912] via-[rgba(239,237,226,0.1)] to-[#070912] border-t border-black/90 z-20" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r from-[#080A09] via-[rgba(239,237,226,0.1)] to-[#080A09] border-t border-black/90 z-20" />
 
       {/* 5. Card Content Surface */}
       <div className="relative z-10 h-full w-full flex flex-col">

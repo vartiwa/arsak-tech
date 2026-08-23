@@ -28,7 +28,7 @@ export const AnalyticsSection = () => (
           <Reveal key={s.label} delay={i * 0.06}>
             <InteractiveCard accentColor={STAT_GLOWS[s.accent] || "rgba(59, 130, 246, 0.15)"} className="h-full">
               {/* TOP COMPARTMENT (Header & Icon Box as per Sketch) */}
-              <div className="p-4 bg-[#101426]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
+              <div className="p-4 bg-[#151815]/90 border-b border-[rgba(239,237,226,0.12)] flex items-center justify-between">
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center border ${ACCENT[s.accent].border} ${ACCENT[s.accent].bg} shadow-inner`}>
                   <s.icon size={18} className={ACCENT[s.accent].text} />
                 </div>
@@ -38,7 +38,7 @@ export const AnalyticsSection = () => (
               </div>
 
               {/* BOTTOM COMPARTMENT (Body Metric Counter as per Sketch) */}
-              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-[#070914]/95">
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-[#0E100F]/95">
                 <div>
                   <div
                     className="text-3xl sm:text-4xl font-bold text-[#EFEDE2] tracking-tight"

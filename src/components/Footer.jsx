@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
 export const Footer = ({ onOpenContact }) => (
-  <footer className="border-t border-[rgba(239,237,226,0.1)] bg-[#04060d] py-12 relative z-10">
+  <footer className="border-t border-[rgba(239,237,226,0.1)] bg-[#080A09] py-12 relative z-10">
     <div className="max-w-6xl mx-auto px-6 md:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
       <div className="flex flex-col items-center md:items-start">
         <a href="#" className="flex items-center select-none group">
