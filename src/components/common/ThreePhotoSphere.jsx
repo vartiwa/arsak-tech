@@ -140,9 +140,9 @@ function createUltraRealisticCloudsTexture() {
       const qy = fbm(nx + 3.4, ny + 2.5);
       const rawNoise = fbm(nx + 3.0 * qx, ny + 3.0 * qy);
 
-      let cloudVal = (rawNoise * 1.3 - 0.45) * beltFactor;
+      let cloudVal = (rawNoise * 1.55 - 0.30) * (beltFactor * 0.85 + 0.30);
       cloudVal = Math.max(0, Math.min(1, cloudVal));
-      const alpha = Math.pow(cloudVal, 1.6) * 0.72;
+      const alpha = Math.pow(cloudVal, 1.3) * 0.92;
 
       const idx = (py * 2048 + px) * 4;
       data[idx] = 255;
@@ -347,7 +347,7 @@ export const ThreePhotoSphere = () => {
           float dayFactor = smoothstep(-0.15, 0.3, sunDot);
 
           vec4 cloudSample = texture2D(cloudsMap, vUv);
-          float alpha = cloudSample.a * 0.44;
+          float alpha = cloudSample.a * 0.68;
 
           vec3 dayColor = vec3(0.96, 0.98, 1.0);
           vec3 nightColor = vec3(0.04, 0.06, 0.1);

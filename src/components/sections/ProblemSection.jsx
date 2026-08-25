@@ -26,7 +26,7 @@ const ManualDeskPanel = () => (
           {Array.from({ length: 18 }).map((_, i) => (
             <div
               key={i}
-              className="h-3.5 rounded-sm bg-[#FAF7F0] border border-[rgba(22,20,14,0.12)]"
+              className="h-3.5 rounded-sm bg-[#FAF7F0] border border-[rgba(22,20,14,0.11)]"
               style={{ opacity: 0.45 + (i % 5) * 0.12 }}
             />
           ))}

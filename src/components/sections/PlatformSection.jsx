@@ -21,7 +21,7 @@ export const PlatformSection = () => (
               {/* TOP COMPARTMENT */}
               <div className="p-4 bg-[#EFECE3] shadow-[inset_0_2px_4px_rgba(22,20,14,0.03)] border-b border-[rgba(22,20,14,0.11)] flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg flex items-center justify-center border border-[rgba(22,20,14,0.12)] bg-white text-[#0D0C09] shadow-sm">
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center border border-[rgba(22,20,14,0.11)] bg-white text-[#0D0C09] shadow-sm">
                     <Layers size={15} />
                   </div>
                   <h3 className="text-[#0D0C09] text-xs font-mono tracking-wider uppercase font-bold">

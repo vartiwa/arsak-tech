@@ -74,7 +74,7 @@ export const IndustriesSection = () => (
           <Reveal key={ind.title} delay={i * 0.04}>
             <InteractiveCard className="h-full">
               <div className="p-3.5 bg-[#EFECE3] shadow-[inset_0_2px_4px_rgba(22,20,14,0.03)] border-b border-[rgba(22,20,14,0.11)] flex items-center justify-between">
-                <div className="w-7 h-7 rounded-lg flex items-center justify-center border border-[rgba(22,20,14,0.12)] bg-white text-[#0D0C09] shadow-sm">
+                <div className="w-7 h-7 rounded-lg flex items-center justify-center border border-[rgba(22,20,14,0.11)] bg-white text-[#0D0C09] shadow-sm">
                   <ind.icon size={14} />
                 </div>
                 <span className="text-[10px] font-mono text-[#6B6557] font-bold">Industry</span>

@@ -30,7 +30,7 @@ export const AIAgentSection = () => (
           <InteractiveCard className="h-full">
             <div className="flex items-center justify-between px-5 py-4 border-b border-[rgba(22,20,14,0.11)] bg-[#EFECE3] shadow-[inset_0_2px_4px_rgba(22,20,14,0.03)]">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-white border border-[rgba(22,20,14,0.12)] flex items-center justify-center text-[#7C3AED] shadow-sm">
+                <div className="w-8 h-8 rounded-lg bg-white border border-[rgba(22,20,14,0.11)] flex items-center justify-center text-[#7C3AED] shadow-sm">
                   <Sparkles size={15} />
                 </div>
                 <span className="text-xs text-[#0D0C09] font-bold font-mono">Arsak AI · Autonomous Operations</span>
@@ -42,7 +42,7 @@ export const AIAgentSection = () => (
             </div>
 
             <div className="p-6 bg-white flex flex-col gap-3.5 font-sans">
-              <div className="self-end max-w-[85%] bg-[#FAF7F0] border border-[rgba(22,20,14,0.12)] text-[#0D0C09] text-xs sm:text-sm font-semibold rounded-2xl px-4 py-2.5 shadow-sm">
+              <div className="self-end max-w-[85%] bg-[#FAF7F0] border border-[rgba(22,20,14,0.11)] text-[#0D0C09] text-xs sm:text-sm font-semibold rounded-2xl px-4 py-2.5 shadow-sm">
                 Show pending purchase orders requiring validation.
               </div>
 

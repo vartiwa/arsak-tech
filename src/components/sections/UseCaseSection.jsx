@@ -6,11 +6,12 @@ import { FlowLine } from "../common/FlowLine";
 import { InteractiveCard } from "../common/InteractiveCard";
 
 const FeaturedFlow = ({ title, steps, isArsak }) => (
-  <InteractiveCard className="p-6 md:p-8 h-full flex flex-col justify-between">
-    <div>
-      <div className="flex items-center justify-between mb-6">
+  <InteractiveCard className="p-6 md:p-8 h-full flex flex-col justify-between items-center text-center">
+    <div className="w-full flex flex-col items-center">
+      {/* Centered Flow Category Title */}
+      <div className="flex items-center justify-center mb-6 w-full">
         <span
-          className={`inline-block text-xs font-mono tracking-wider uppercase font-bold px-3 py-1 rounded-full border ${
+          className={`inline-block text-xs font-mono tracking-wider uppercase font-bold px-4 py-1.5 rounded-full border text-center ${
             isArsak
               ? "text-[#0D1204] bg-[#BCEB28] border-[#0D1204]/15 shadow-sm"
               : "text-[#B45309] bg-[#FEF3C7] border-[#FDE68A]"
@@ -19,11 +20,13 @@ const FeaturedFlow = ({ title, steps, isArsak }) => (
           {title}
         </span>
       </div>
-      <div className="flex flex-col">
+
+      {/* Centered Workflow Steps */}
+      <div className="flex flex-col items-center w-full">
         {steps.map((s, i) => (
-          <div key={s}>
+          <div key={s} className="w-full flex flex-col items-center">
             <div
-              className={`text-xs sm:text-sm rounded-xl px-4 py-3 border font-semibold ${
+              className={`text-xs sm:text-sm rounded-xl px-4 py-3 border font-semibold text-center w-full max-w-sm flex items-center justify-center ${
                 isArsak
                   ? "border-[#BCEB28] bg-[#FAF7F0] text-[#0D0C09] shadow-[0_4px_12px_rgba(188,235,40,0.15)]"
                   : "border-[rgba(22,20,14,0.11)] bg-[#FAF7F0] text-[#6B6557]"
@@ -32,7 +35,7 @@ const FeaturedFlow = ({ title, steps, isArsak }) => (
               {s}
             </div>
             {i < steps.length - 1 && (
-              <div className="my-1">
+              <div className="my-1 flex justify-center w-full">
                 <FlowLine length={20} delay={i * 0.15} color={isArsak ? "#059669" : "#d97706"} />
               </div>
             )}
