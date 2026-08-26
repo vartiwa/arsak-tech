@@ -8,8 +8,8 @@ export const Footer = ({ onOpenContact }) => (
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="flex flex-col items-center md:items-start">
           <a href="#" className="flex items-center select-none group">
-            <div className="bg-white hover:bg-[#FAF7F0] transition-all px-3.5 py-1.5 rounded-xl border border-[rgba(22,20,14,0.12)] shadow-[0_2px_8px_-2px_rgba(22,20,14,0.08),inset_0_1px_0_rgba(255,255,255,1)] flex items-center justify-center">
-              <img src="/logo.png" alt="Arsak Technologies" className="h-6 sm:h-7 w-auto object-contain" />
+            <div className="bg-white hover:bg-white/95 transition-all px-4 py-2 sm:px-4.5 sm:py-2.5 rounded-xl border border-[rgba(22,20,14,0.12)] shadow-[0_2px_8px_-2px_rgba(22,20,14,0.08),inset_0_1px_0_rgba(255,255,255,1)] flex items-center justify-center group-hover:shadow-[0_6px_16px_-2px_rgba(22,20,14,0.12)] group-hover:scale-[1.02]">
+              <img src="/logo.png" alt="Arsak Technologies" className="h-10 sm:h-12 w-auto object-contain" />
             </div>
           </a>
           <p className="text-[#6B6557] text-xs mt-3 text-center md:text-left font-mono font-medium">

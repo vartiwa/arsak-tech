@@ -37,11 +37,11 @@ export const Nav = ({ onOpenContact }) => {
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
         {/* Brand Logo in High-Contrast Container with Depth */}
         <a href="#" className="flex items-center select-none group">
-          <div className="bg-white hover:bg-[#FAF7F0] transition-all px-3.5 py-1.5 rounded-xl border border-[rgba(22,20,14,0.12)] shadow-[0_2px_8px_-2px_rgba(22,20,14,0.08),inset_0_1px_0_rgba(255,255,255,1)] flex items-center justify-center">
+          <div className="bg-white hover:bg-white/95 transition-all px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-[rgba(22,20,14,0.12)] shadow-[0_2px_8px_-2px_rgba(22,20,14,0.08),inset_0_1px_0_rgba(255,255,255,1)] flex items-center justify-center group-hover:shadow-[0_6px_16px_-2px_rgba(22,20,14,0.12)] group-hover:scale-[1.02]">
             <img
               src="/logo.png"
               alt="Arsak Technologies Logo"
-              className="h-6 sm:h-7 w-auto object-contain"
+              className="h-9 sm:h-10 md:h-11 w-auto object-contain"
             />
           </div>
         </a>

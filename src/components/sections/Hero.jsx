@@ -5,7 +5,7 @@ import { ThreePhotoSphere } from "../common/ThreePhotoSphere";
 
 export const Hero = ({ onOpenContact }) => {
   return (
-    <section className="relative pt-20 pb-8 sm:pt-24 sm:pb-10 lg:pt-20 lg:pb-10 min-h-[calc(100vh-65px)] flex items-center overflow-hidden bg-transparent">
+    <section className="relative pt-24 pb-8 sm:pt-28 sm:pb-10 lg:pt-24 lg:pb-10 min-h-[calc(100vh-65px)] flex items-center overflow-hidden bg-transparent">
       <div className="max-w-7xl mx-auto px-6 md:px-8 w-full">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-6 items-center">
           
