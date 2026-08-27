@@ -32,7 +32,7 @@ export const ScrollFlowStream = () => {
         viewBox="0 0 1440 7800"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full opacity-80"
+        className="w-full h-full opacity-30 sm:opacity-60 lg:opacity-80"
         preserveAspectRatio="none"
       >
         <defs>

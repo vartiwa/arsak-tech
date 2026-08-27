@@ -1,153 +1,259 @@
 import React, { useState } from "react";
-import { Terminal, CheckCircle2, Play, Sparkles, Activity, FileJson, ArrowUpRight, Cpu } from "lucide-react";
+import {
+  Globe,
+  ShoppingBag,
+  Calendar,
+  CheckCircle2,
+  Sparkles,
+  RefreshCw
+} from "lucide-react";
 import { Reveal } from "../common/Reveal";
 import { SectionHeading } from "../common/SectionHeading";
 import { InteractiveCard } from "../common/InteractiveCard";
 
-export const DemoSection = () => {
-  const [activeMetric, setActiveMetric] = useState(0);
+const WEBSITE_PRESETS = [
+  {
+    id: "lead-gen",
+    title: "Business & Company Website",
+    category: "Lead Capture & WhatsApp",
+    icon: Globe,
+    mockPreview: {
+      siteName: "Apex Interior Studio",
+      actionTitle: "New Client Inquiry Submitted",
+      visitorName: "Rahul Sharma",
+      contact: "+91 98765 43210 · Mumbai",
+      serviceRequested: "Complete 3BHK Home Interior Design",
+      submittedTime: "Just now (Mobile Browser)"
+    },
+    liveOutcomes: [
+      { label: "WhatsApp Auto-Reply", val: "Sent in 1 sec", desc: "Service catalog & price list sent to client", status: "Instant Reply" },
+      { label: "Automatic Lead Alert", val: "Instant Alert", desc: "Notification sent to owner's WhatsApp", status: "Logged" },
+      { label: "Mobile Speed Score", val: "99 / 100", desc: "Loads instantly on 4G and 5G phones", status: "Super Fast" },
+      { label: "Google Search (SEO)", val: "Optimized", desc: "Ready for local Google search ranking", status: "SEO Ready" }
+    ],
+    techStack: "Clean Modern Code · Fast Hosting · WhatsApp Alerts",
+    responseLatency: "< 1 Sec"
+  },
+  {
+    id: "ecommerce",
+    title: "Online Store & E-Commerce",
+    category: "UPI Checkout & Order Alerts",
+    icon: ShoppingBag,
+    mockPreview: {
+      siteName: "Urban Craft Apparel",
+      actionTitle: "Online Order #ORD-8821 Paid",
+      visitorName: "Ananya Iyer",
+      contact: "Paid via UPI (Google Pay / PhonePe)",
+      serviceRequested: "2x Premium Linen Shirts (₹3,499)",
+      submittedTime: "Just now (Instant Checkout)"
+    },
+    liveOutcomes: [
+      { label: "1-Tap UPI Payment", val: "Instant Success", desc: "Easy payment via GPay, PhonePe, or Cards", status: "Instant Settlement" },
+      { label: "WhatsApp Order Receipt", val: "PDF Sent", desc: "Automated invoice with order summary", status: "Delivered" },
+      { label: "Real-Time Stock Update", val: "-2 Units Synced", desc: "Available quantity auto-decremented", status: "Updated" },
+      { label: "Customer Details Saved", val: "Saved to List", desc: "Added to customer list for repeat orders", status: "Saved" }
+    ],
+    techStack: "UPI & Cards · Instant Invoicing · Inventory Tracking",
+    responseLatency: "< 1 Sec"
+  },
+  {
+    id: "booking",
+    title: "Appointment Booking Website",
+    category: "Calendar & Reminders",
+    icon: Calendar,
+    mockPreview: {
+      siteName: "Dr. Mehta Dental Clinic",
+      actionTitle: "Appointment Slot Reserved",
+      visitorName: "Vikram Malhotra",
+      contact: "Confirmed for Saturday, 11:30 AM",
+      serviceRequested: "Dental Checkup & Consultation",
+      submittedTime: "Booked via 24/7 Web Widget"
+    },
+    liveOutcomes: [
+      { label: "Calendar Sync", val: "Slot Reserved", desc: "Direct 2-way sync with your Google Calendar", status: "Confirmed" },
+      { label: "WhatsApp & SMS Reminder", val: "Scheduled", desc: "Automatic reminders to reduce missed appointments", status: "Automated" },
+      { label: "Patient / Client Details", val: "Saved", desc: "Contact details collected before arrival", status: "Organized" },
+      { label: "Zero Phone Tag", val: "100% Online", desc: "Clients pick their own available time slot", status: "Hands-Free" }
+    ],
+    techStack: "Google Calendar · Automated Reminders · Mobile Booking",
+    responseLatency: "< 1 Sec"
+  }
+];
 
-  const metrics = [
-    { name: "OCR", label: "Model Latency", val: "18ms", color: "#059669", bg: "#ECFDF5", border: "#A7F3D0" },
-    { name: "LLM", label: "Context Window", val: "128k", color: "#2563EB", bg: "#EFF6FF", border: "#BFDBFE" },
-    { name: "ERP", label: "API Sync Rate", val: "99.9%", color: "#059669", bg: "#ECFDF5", border: "#A7F3D0" },
-    { name: "SEC", label: "TLS Encryption", val: "v1.3", color: "#7C3AED", bg: "#F5F3FF", border: "#DDD6FE" },
-    { name: "OPS", label: "Throughput", val: "2.4k/s", color: "#D97706", bg: "#FFFBEB", border: "#FDE68A" },
-    { name: "VPC", label: "Isolated Node", val: "Ready", color: "#0D9488", bg: "#F0FDFA", border: "#99F6E4" },
-    { name: "ISO", label: "Compliance", val: "Passed", color: "#059669", bg: "#ECFDF5", border: "#A7F3D0" }
-  ];
+export const DemoSection = () => {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const [isSimulating, setIsSimulating] = useState(false);
+
+  const activeDemo = WEBSITE_PRESETS[activeIdx];
+
+  const triggerSimulation = () => {
+    setIsSimulating(true);
+    setTimeout(() => setIsSimulating(false), 600);
+  };
 
   return (
-    <section id="demo" className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+    <section id="demo" className="py-12 sm:py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <SectionHeading
-          eyebrow="Interactive Blueprint"
-          title="Engineered with Mathematical Precision."
-          sub="Inspect our autonomous extraction pipelines, live telemetry visualizers, and ERP synchronization schemas."
+          eyebrow="Interactive Website Showcase"
+          title="See How Our Websites Win & Automate Customers"
+          sub="Select a business model below to test how our websites capture inquiries, take payments, and automate daily tasks."
           center
         />
 
-        <div className="mt-14 grid lg:grid-cols-12 gap-6">
+        {/* Website Format Selector */}
+        <div className="mt-8 flex flex-wrap justify-center gap-2 sm:gap-3">
+          {WEBSITE_PRESETS.map((preset, i) => {
+            const Icon = preset.icon;
+            const isSelected = activeIdx === i;
+            return (
+              <button
+                key={preset.id}
+                onClick={() => {
+                  setActiveIdx(i);
+                  triggerSimulation();
+                }}
+                className={`inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                  isSelected
+                    ? "bg-[#0D0C09] text-white shadow-sm scale-102"
+                    : "bg-white text-[#4A453A] border border-[rgba(22,20,14,0.12)] hover:border-[#0D0C09] hover:bg-[#FAF7F0]"
+                }`}
+              >
+                <Icon size={16} className={isSelected ? "text-[#BCEB28]" : "text-[#6B6557]"} />
+                <span>{preset.title}</span>
+                <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full hidden sm:inline ${
+                  isSelected ? "bg-white/20 text-white" : "bg-[#FAF7F0] text-[#6B6557]"
+                }`}>
+                  {preset.category}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* 2-Column Clean Interactive Sandbox */}
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           
-          {/* Main Config Card */}
-          <div className="lg:col-span-7">
-            <Reveal>
-              <InteractiveCard className="h-full">
-                {/* Header Compartment with Inset Depth */}
-                <div className="p-4 sm:p-5 bg-[#EFECE3] border-b border-[rgba(22,20,14,0.11)] shadow-[inset_0_2px_4px_rgba(22,20,14,0.03)] flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-sm" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-amber-500 shadow-sm" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-sm" />
-                    </div>
-                    <span className="text-xs font-mono text-[#0D0C09] font-bold">pipeline.arsak.config</span>
+          {/* Left Column: Live Visitor Action Card */}
+          <div className="lg:col-span-6 flex flex-col">
+            <Reveal className="h-full">
+              <InteractiveCard className="p-4 sm:p-6 h-full flex flex-col justify-between bg-white">
+                {/* Header */}
+                <div className="flex items-center justify-between pb-3 border-b border-[rgba(22,20,14,0.11)]">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#059669] animate-pulse" />
+                    <span className="text-xs font-mono font-bold text-[#0D0C09] uppercase">
+                      Visitor Interaction: {activeDemo.mockPreview.siteName}
+                    </span>
                   </div>
-                  <span className="text-xs font-mono text-[#0D1204] bg-[#BCEB28] border border-[#0D1204]/15 px-3 py-0.5 rounded-full font-bold shadow-sm">
-                    ● Production Active
-                  </span>
+                  <button
+                    onClick={triggerSimulation}
+                    className="btn-secondary inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-bold cursor-pointer hover:bg-[#BCEB28]"
+                  >
+                    <RefreshCw size={12} className={isSimulating ? "animate-spin" : ""} />
+                    <span>Test Interaction</span>
+                  </button>
                 </div>
 
-                {/* Body Content with High-Contrast Syntax Highlighting */}
-                <div className="p-6 bg-white flex-1 flex flex-col justify-between font-mono text-xs sm:text-[13px] leading-relaxed">
-                  <div className="text-[#38342B] space-y-1.5">
-                    <div><span className="text-[#2563EB] font-bold">const</span> <span className="text-[#0D0C09] font-bold">pipeline</span> = <span className="text-[#7C3AED] font-bold">new</span> <span className="text-[#D97706] font-bold">ArsakPipeline</span>({'{'}</div>
-                    <div className="pl-4"><span className="text-[#6B6557]">tenant:</span> <span className="text-[#059669] font-medium">"enterprise.prod.in"</span>,</div>
-                    <div className="pl-4"><span className="text-[#6B6557]">model:</span> <span className="text-[#059669] font-medium">"arsak-extractor-v4"</span>,</div>
-                    <div className="pl-4"><span className="text-[#6B6557]">validation:</span> <span className="text-[#0D0C09] font-bold">"strict_schema_enforced"</span>,</div>
-                    <div className="pl-4"><span className="text-[#6B6557]">connectors:</span> [<span className="text-[#059669] font-medium">"SAP"</span>, <span className="text-[#059669] font-medium">"PostgreSQL"</span>, <span className="text-[#059669] font-medium">"Salesforce"</span>]</div>
-                    <div>{'}'});</div>
-                    <div className="pt-2 text-[#6B6557]">// Live Execution Telemetry:</div>
-                    <div><span className="text-[#2563EB] font-bold">await</span> <span className="text-[#0D0C09] font-bold">pipeline</span>.<span className="text-[#D97706] font-bold">dispatchSync</span>();</div>
+                {/* Simulated Customer Submission Box */}
+                <div className="my-4 p-4 sm:p-5 rounded-xl bg-[#FAF7F0] border border-[rgba(22,20,14,0.1)] relative font-sans text-xs shadow-inner">
+                  {/* Subtle Pulse Animation */}
+                  {isSimulating && (
+                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[#BCEB28] to-transparent shadow-[0_0_10px_#BCEB28] z-20 animate-pulse" />
+                  )}
+
+                  <div className="flex justify-between items-start pb-3 border-b border-[rgba(22,20,14,0.08)]">
+                    <div>
+                      <div className="font-bold text-[#0D0C09] text-sm font-['Space_Grotesk']">
+                        {activeDemo.mockPreview.actionTitle}
+                      </div>
+                      <div className="text-[11px] text-[#6B6557] font-mono mt-0.5">
+                        Customer: <strong className="text-[#0D0C09]">{activeDemo.mockPreview.visitorName}</strong>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-mono bg-[#EFECE3] px-2 py-0.5 rounded text-[#4A453A] font-semibold">
+                      {activeDemo.mockPreview.submittedTime}
+                    </span>
                   </div>
 
-                  {/* 7-Bar Telemetry Metric Visualizer with Tactile Button Depth */}
-                  <div className="mt-8 pt-5 border-t border-[rgba(22,20,14,0.11)]">
-                    <div className="flex items-center justify-between text-xs mb-3 text-[#4A453A]">
-                      <span className="text-[#0D0C09] font-bold">{metrics[activeMetric].name} Telemetry</span>
-                      <span>{metrics[activeMetric].label}: <strong className="text-[#0D0C09] font-bold">{metrics[activeMetric].val}</strong></span>
+                  {/* Highlights */}
+                  <div className="py-3 space-y-2 text-xs">
+                    <div className="p-2.5 rounded-lg bg-white border border-[rgba(22,20,14,0.1)] flex justify-between items-center">
+                      <span className="text-[#6B6557]">Inquiry / Order Details:</span>
+                      <span className="font-bold text-[#2563EB]">{activeDemo.mockPreview.serviceRequested}</span>
                     </div>
-                    <div className="grid grid-cols-7 gap-2">
-                      {metrics.map((m, idx) => (
-                        <button
-                          key={m.name}
-                          onClick={() => setActiveMetric(idx)}
-                          className={`h-12 rounded-xl transition-all flex flex-col items-center justify-center gap-1 border ${
-                            activeMetric === idx
-                              ? "border-[#0D0C09] bg-[#BCEB28] scale-105 shadow-[0_4px_12px_rgba(188,235,40,0.5),inset_0_1px_0_rgba(255,255,255,0.7)]"
-                              : "border-[rgba(22,20,14,0.11)] bg-[#FAF7F0] hover:border-[rgba(22,20,14,0.25)] hover:bg-[#F3EFE6] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)]"
-                          }`}
-                        >
-                          <span className="text-[10px] font-bold text-[#0D0C09]">{m.name}</span>
-                          <span className="w-2 h-2 rounded-full shadow-sm" style={{ backgroundColor: m.color }} />
-                        </button>
-                      ))}
+                    <div className="p-2.5 rounded-lg bg-white border border-[rgba(22,20,14,0.1)] flex justify-between items-center">
+                      <span className="text-[#6B6557]">Contact / Payment Mode:</span>
+                      <span className="font-bold text-[#059669]">{activeDemo.mockPreview.contact}</span>
                     </div>
                   </div>
+
+                  <div className="pt-2 text-[10px] font-mono text-[#8A8475] flex items-center justify-between border-t border-[rgba(22,20,14,0.06)]">
+                    <span>Engine: Arsak Web Speed Core</span>
+                    <span>100% Mobile Optimized</span>
+                  </div>
+                </div>
+
+                {/* Footer */}
+                <div className="pt-3 border-t border-[rgba(22,20,14,0.11)] flex items-center justify-between text-xs font-mono">
+                  <span className="text-[#6B6557]">Response Speed: <strong className="text-[#0D0C09]">{activeDemo.responseLatency}</strong></span>
+                  <span className="text-[#059669] font-bold">✓ Zero Customer Delay</span>
                 </div>
               </InteractiveCard>
             </Reveal>
           </div>
 
-          {/* Right Column: Sub-Bento Boxes with Depth */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            
-            {/* Box 1: Extraction Schema Output */}
-            <Reveal delay={0.06}>
-              <InteractiveCard>
-                <div className="p-4 bg-[#EFECE3] border-b border-[rgba(22,20,14,0.11)] shadow-[inset_0_2px_4px_rgba(22,20,14,0.03)] flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <FileJson size={16} className="text-[#0D0C09]" />
-                    <span className="text-xs font-mono text-[#0D0C09] font-bold">payload.extracted.json</span>
-                  </div>
-                  <span className="text-[11px] font-mono text-[#059669] bg-[#ECFDF5] border border-[#A7F3D0] px-2 py-0.5 rounded-full font-bold">
-                    Validated
-                  </span>
-                </div>
-                <div className="p-5 bg-white font-mono text-xs text-[#38342B] space-y-2">
-                  <div className="flex justify-between pb-1 border-b border-[rgba(22,20,14,0.05)]">
-                    <span className="text-[#6B6557]">invoice_id:</span> <span className="text-[#0D0C09] font-bold">"INV-2048"</span>
-                  </div>
-                  <div className="flex justify-between pb-1 border-b border-[rgba(22,20,14,0.05)]">
-                    <span className="text-[#6B6557]">vendor:</span> <span className="text-[#0D0C09] font-bold">"ABC Industries Ltd."</span>
-                  </div>
-                  <div className="flex justify-between pb-1 border-b border-[rgba(22,20,14,0.05)]">
-                    <span className="text-[#6B6557]">net_payable:</span> <span className="text-[#0D0C09] font-extrabold text-[13px] bg-[#FEF3C7] px-1.5 py-0.5 rounded border border-[#FDE68A]">"₹84,500.00"</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-[#6B6557]">confidence:</span> <span className="text-[#059669] font-bold">"99.82%"</span>
-                  </div>
-                </div>
-              </InteractiveCard>
-            </Reveal>
+          {/* Right Column: Automated Business Outcomes */}
+          <div className="lg:col-span-6 flex flex-col">
+            <Reveal delay={0.06} className="h-full">
+              <InteractiveCard className="p-4 sm:p-6 h-full flex flex-col justify-between bg-white">
+                <div>
+                  {/* Top Mode Bar */}
+                  <div className="flex items-center justify-between pb-3 border-b border-[rgba(22,20,14,0.11)]">
+                    <div className="flex items-center gap-1.5">
+                      <Sparkles size={16} className="text-[#059669]" />
+                      <span className="text-xs font-bold text-[#0D0C09] font-mono uppercase">
+                        Instant Automated Business Results
+                      </span>
+                    </div>
 
-            {/* Box 2: Autonomous Copilot Mode */}
-            <Reveal delay={0.1}>
-              <InteractiveCard>
-                <div className="p-4 bg-[#EFECE3] border-b border-[rgba(22,20,14,0.11)] shadow-[inset_0_2px_4px_rgba(22,20,14,0.03)] flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Cpu size={16} className="text-[#2563EB]" />
-                    <span className="text-xs font-mono text-[#0D0C09] font-bold">copilot.autonomous.node</span>
-                  </div>
-                  <span className="text-[11px] font-mono text-[#2563EB] bg-[#EFF6FF] border border-[#BFDBFE] px-2 py-0.5 rounded-full font-bold">
-                    VPC Secure
-                  </span>
-                </div>
-                <div className="p-5 bg-white flex flex-col justify-between text-xs text-[#4A453A]">
-                  <p className="leading-relaxed font-medium">
-                    Zero-human-intervention routing configured. Exceptions exceeding tolerance trigger instantaneous Slack/Email escalations.
-                  </p>
-                  <div className="mt-4 pt-3 border-t border-[rgba(22,20,14,0.11)] flex items-center justify-between font-mono text-[11px]">
-                    <span className="text-[#0D0C09] font-bold flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#059669]" />
-                      Audit Trace: 100% Immutable
+                    <span className="text-xs font-mono font-bold text-[#059669] bg-[#ECFDF5] border border-[#A7F3D0] px-2.5 py-1 rounded-full flex items-center gap-1">
+                      <CheckCircle2 size={12} />
+                      <span>100% Automated</span>
                     </span>
-                    <ArrowUpRight size={13} className="text-[#6B6557]" />
                   </div>
+
+                  {/* 4 Automated Outcome Items */}
+                  <div className="my-4 space-y-2">
+                    {activeDemo.liveOutcomes.map((item) => (
+                      <div
+                        key={item.label}
+                        className="p-2.5 sm:p-3 rounded-xl bg-[#FAF7F0] border border-[rgba(22,20,14,0.1)] flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs"
+                      >
+                        <div>
+                          <div className="text-xs font-bold text-[#0D0C09]">{item.label}</div>
+                          <div className="text-[11px] text-[#6B6557] mt-0.5">{item.desc}</div>
+                        </div>
+                        <div className="flex items-center gap-2 shrink-0">
+                          <span className="text-[10px] font-bold text-[#059669] bg-[#ECFDF5] px-2 py-0.5 rounded-md border border-[#A7F3D0]">
+                            {item.val}
+                          </span>
+                          <span className="text-[10px] font-mono text-[#4A453A] font-semibold">
+                            {item.status}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Tech Stack Footer */}
+                <div className="pt-3 border-t border-[rgba(22,20,14,0.11)] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono">
+                  <span className="text-[#6B6557]">Tech: <strong className="text-[#0D0C09]">{activeDemo.techStack}</strong></span>
+                  <span className="text-[#059669] font-bold">Built for Real Business Growth</span>
                 </div>
               </InteractiveCard>
             </Reveal>
-
           </div>
 
         </div>

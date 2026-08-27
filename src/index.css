@@ -70,6 +70,7 @@
   border: 1px solid rgba(13, 18, 4, 0.15);
   transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
   box-shadow: 0 4px 14px -2px rgba(188, 235, 40, 0.45), 0 2px 4px rgba(13, 18, 4, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  touch-action: manipulation;
 }
 
 .btn-lime:hover {
@@ -91,6 +92,7 @@
   border-radius: 9999px;
   transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
   box-shadow: 0 3px 10px -2px rgba(22, 20, 14, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1);
+  touch-action: manipulation;
 }
 
 .btn-secondary:hover {

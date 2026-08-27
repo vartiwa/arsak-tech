@@ -6,15 +6,15 @@ import { InteractiveCard } from "../common/InteractiveCard";
 import { ArrowUpRight, Layers } from "lucide-react";
 
 export const ServicesSection = ({ onOpenContact }) => (
-  <section id="services" className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
-    <div className="max-w-6xl mx-auto px-6 md:px-8">
+  <section id="services" className="py-12 sm:py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
       <SectionHeading
         eyebrow="Capabilities"
         accent="blue"
         title="Enterprise Capabilities & Engineering Services."
         sub="From bespoke AI architectures to legacy ERP modernization, we build production systems that scale."
       />
-      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {SERVICES.map((s, i) => (
           <Reveal key={s} delay={i * 0.05}>
             <InteractiveCard accentColor="rgba(56, 189, 248, 0.14)" className="h-full cursor-pointer" onClick={onOpenContact}>

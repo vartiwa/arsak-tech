@@ -7,7 +7,7 @@ export const InteractiveCard = ({
 }) => {
   return (
     <div
-      className={`relative group rounded-2xl transition-all duration-300 transform-gpu hover:-translate-y-2 overflow-hidden flex flex-col bg-white border border-[rgba(22,20,14,0.11)] shadow-[0_14px_34px_-8px_rgba(22,20,14,0.12),0_4px_12px_rgba(22,20,14,0.05),0_1px_3px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_65px_-12px_rgba(22,20,14,0.20),0_10px_24px_rgba(22,20,14,0.08)] hover:border-[rgba(22,20,14,0.25)] before:absolute before:inset-x-0 before:-bottom-3 before:h-3 before:content-[''] ${className}`}
+      className={`relative group rounded-2xl transition-all duration-300 transform-gpu sm:hover:-translate-y-2 active:scale-[0.99] overflow-hidden flex flex-col bg-white border border-[rgba(22,20,14,0.11)] shadow-[0_14px_34px_-8px_rgba(22,20,14,0.12),0_4px_12px_rgba(22,20,14,0.05),0_1px_3px_rgba(0,0,0,0.03)] sm:hover:shadow-[0_30px_65px_-12px_rgba(22,20,14,0.20),0_10px_24px_rgba(22,20,14,0.08)] sm:hover:border-[rgba(22,20,14,0.25)] before:absolute before:inset-x-0 before:-bottom-3 before:h-3 before:content-[''] ${className}`}
       {...props}
     >
       {/* 1. Top Specular Glaze Sheen */}

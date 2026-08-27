@@ -6,12 +6,12 @@ import { SectionHeading } from "../common/SectionHeading";
 import { InteractiveCard } from "../common/InteractiveCard";
 
 export const PlatformSection = () => (
-  <section id="platform" className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
-    <div className="max-w-7xl mx-auto px-6 md:px-8">
+  <section id="platform" className="py-12 sm:py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
       <SectionHeading
-        eyebrow="Architecture"
-        title="One Unified Automation Layer."
-        sub="Connecting incoming business inputs to downstream systems with total transparency."
+        eyebrow="What's Included"
+        title="Everything Your Website Needs to Succeed."
+        sub="From fast mobile layouts and 1-tap WhatsApp buttons to payment setups and secure hosting."
         center
       />
       <div className="mt-14 grid lg:grid-cols-4 gap-5 items-stretch">
@@ -46,7 +46,7 @@ export const PlatformSection = () => (
                 </div>
                 <div className="mt-4 pt-3 border-t border-[rgba(22,20,14,0.11)] text-[11px] font-mono text-[#059669] font-bold flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#059669]" />
-                  Active Subsystem Ready
+                  Included in Every Website
                 </div>
               </div>
             </InteractiveCard>

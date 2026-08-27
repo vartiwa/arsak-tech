@@ -6,8 +6,8 @@ import { FlowLine } from "../common/FlowLine";
 import { InteractiveCard } from "../common/InteractiveCard";
 
 export const HowItWorks = () => (
-  <section className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
-    <div className="max-w-7xl mx-auto px-6 md:px-8">
+  <section className="py-12 sm:py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
       <SectionHeading
         eyebrow="Process"
         title="How We Partner With You."

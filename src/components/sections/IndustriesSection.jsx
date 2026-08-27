@@ -11,14 +11,14 @@ const IndustryVisual = ({ accent }) => (
   >
     <div
       className="absolute inset-0 opacity-15"
-      style={{ background: `radial-gradient(circle at 30% 30%, ${ACCENT[accent].dot}, transparent 60%)` }}
+      style={{ background: `radial-gradient(circle at 30% 30%, ${(ACCENT[accent] || ACCENT.blue).dot}, transparent 60%)` }}
     />
     <div className="absolute bottom-2.5 left-3 right-3 flex gap-1.5 items-end">
       {[0.9, 0.5, 0.75, 0.35, 0.65].map((h, i) => (
         <div
           key={i}
           className="flex-1 rounded-sm shadow-sm"
-          style={{ height: `${h * 26}px`, background: ACCENT[accent].dot, opacity: 0.85 }}
+          style={{ height: `${h * 26}px`, background: (ACCENT[accent] || ACCENT.blue).dot, opacity: 0.85 }}
         />
       ))}
     </div>
@@ -26,8 +26,8 @@ const IndustryVisual = ({ accent }) => (
 );
 
 export const IndustriesSection = () => (
-  <section id="industries" className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
-    <div className="max-w-7xl mx-auto px-6 md:px-8">
+  <section id="industries" className="py-12 sm:py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
       <SectionHeading
         eyebrow="Industries"
         title="Solutions Tailored Across Sectors."
@@ -41,8 +41,8 @@ export const IndustriesSection = () => (
               <div className="p-4 bg-[#EFECE3] shadow-[inset_0_2px_4px_rgba(22,20,14,0.03)] border-b border-[rgba(22,20,14,0.11)] flex flex-col gap-2.5">
                 <IndustryVisual accent={ind.accent} />
                 <div className="flex items-center justify-between">
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center border ${ACCENT[ind.accent].border} ${ACCENT[ind.accent].bg} shadow-sm`}>
-                    <ind.icon size={16} className={ACCENT[ind.accent].text} />
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center border ${(ACCENT[ind.accent] || ACCENT.blue).border} ${(ACCENT[ind.accent] || ACCENT.blue).bg} shadow-sm`}>
+                    <ind.icon size={16} className={(ACCENT[ind.accent] || ACCENT.blue).text} />
                   </div>
                   <span className="text-[11px] font-mono text-[#6B6557] font-bold">Sector 0{i + 1}</span>
                 </div>

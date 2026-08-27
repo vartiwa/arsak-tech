@@ -1,8 +1,8 @@
 import {
-  FileText, ShieldCheck, Layers, Database, AlertTriangle, Puzzle,
-  Mail, FileSpreadsheet, Building2, Truck, ShoppingCart,
-  Landmark, HeartPulse, GraduationCap, Briefcase, Rocket, Webhook, Sparkles,
-  Users, Code2, Workflow, ScanLine, BarChart3, TrendingDown, TrendingUp, Gauge
+  Globe, Layout, Smartphone, Sparkles, Code2,
+  Building2, ShoppingBag, Stethoscope, Briefcase, GraduationCap,
+  Truck, ShieldCheck, Zap, Gauge, Clock,
+  MessageSquare, Utensils, Home
 } from "lucide-react";
 
 export const ACCENT = {
@@ -13,97 +13,112 @@ export const ACCENT = {
   orange: { text: "text-amber-800",  border: "border-amber-200",  bg: "bg-amber-50",  dot: "#d97706", ring: "hover:border-amber-400" },
 };
 
-export const NAV_LINKS = ["Solutions", "Industries", "Services", "About"];
-
 export const VALUE = [
-  { n: "01", title: "Automation", desc: "Automate repetitive business processes end-to-end.", icon: Workflow, accent: "blue" },
-  { n: "02", title: "Software", desc: "Build tailored, scalable digital products and internal tools.", icon: Code2, accent: "purple" },
-  { n: "03", title: "Integration", desc: "Connect legacy ERP, modern CRMs, and unified databases.", icon: Webhook, accent: "green" },
+  { n: "01", title: "Modern Business Websites", desc: "Clean, fast websites that look great on phones and turn visitors into real customers.", icon: Layout, accent: "blue" },
+  { n: "02", title: "Online Stores & Booking", desc: "Sell products with UPI payments or let clients easily book appointments 24/7.", icon: ShoppingBag, accent: "purple" },
+  { n: "03", title: "Simple WhatsApp Alerts", desc: "Get instant WhatsApp notifications when a customer fills a form or asks for a quote.", icon: Zap, accent: "green" },
 ];
 
 export const PROBLEMS = [
-  { icon: FileText, title: "Manual Data Entry & Document Processing" },
-  { icon: Puzzle, title: "Disconnected Siloed Systems" },
-  { icon: AlertTriangle, title: "Operational & Compliance Errors" },
+  { icon: Globe, title: "Outdated, slow website that makes visitors leave" },
+  { icon: Smartphone, title: "Hard to navigate on mobile phones" },
+  { icon: MessageSquare, title: "Losing customer inquiries due to slow manual replies" },
 ];
 
 export const SOLUTIONS = [
-  { icon: ScanLine, title: "AI & Document Automation", desc: "Extract, validate, and route data from invoices, contracts, and unstructured files.", accent: "blue" },
-  { icon: Workflow, title: "Workflow Automation", desc: "Streamline multi-step approvals, departmental handoffs, and ops tasks.", accent: "purple" },
-  { icon: FileSpreadsheet, title: "Intelligent Data Extraction", desc: "Convert incoming emails, spreadsheets, and PDFs into structured records.", accent: "cyan" },
-  { icon: Code2, title: "Custom Enterprise Software", desc: "Scalable internal dashboards, client portals, and bespoke applications.", accent: "green" },
-  { icon: Webhook, title: "System Integration", desc: "Bi-directional sync between ERPs, CRMs, payment gateways, and databases.", accent: "orange" },
-  { icon: BarChart3, title: "Real-time Data & Analytics", desc: "Live operational telemetry and interactive executive dashboards.", accent: "blue" },
+  { icon: Globe, title: "Company & Business Websites", desc: "Clean, professional websites with 1-tap WhatsApp and call buttons that build trust with new clients.", accent: "blue" },
+  { icon: ShoppingBag, title: "Online Stores (E-Commerce)", desc: "Simple online storefronts with instant UPI, Google Pay, and credit card payments.", accent: "purple" },
+  { icon: Clock, title: "Appointment & Service Booking", desc: "Automatic booking calendars for clinics, consultants, salons, and home services.", accent: "cyan" },
+  { icon: MessageSquare, title: "Instant WhatsApp Alerts", desc: "Get customer names, phone numbers, and inquiries delivered straight to your WhatsApp.", accent: "green" },
+  { icon: Code2, title: "Client Portals & Dashboards", desc: "Simple private login areas for your customers to see quotes, receipts, or project progress.", accent: "orange" },
+  { icon: Sparkles, title: "Custom Business Tools", desc: "Tailored digital tools to easily manage your daily billing, inventory, or customer lists.", accent: "blue" },
 ];
 
 export const STEPS = [
-  { n: "01", title: "Discover", desc: "Audit manual workflows and identify high-ROI automation targets." },
-  { n: "02", title: "Design", desc: "Architect resilient pipelines and secure system integrations." },
-  { n: "03", title: "Build", desc: "Develop AI models, automations, and custom interfaces." },
-  { n: "04", title: "Integrate", desc: "Seamlessly connect into your existing ERP, CRM, and cloud tools." },
-  { n: "05", title: "Improve", desc: "Continuously monitor throughput, accuracy, and exception handling." },
+  { n: "01", title: "Share Your Vision", desc: "Tell us about your business, the services you offer, and what you'd like on your website." },
+  { n: "02", title: "Design & Preview", desc: "We design a clean, modern layout and share a live interactive preview for your feedback." },
+  { n: "03", title: "Fast Development", desc: "We build your site to load ultra-fast on mobile phones, tablets, and computers." },
+  { n: "04", title: "Review & Launch", desc: "We connect your domain name, set up your contact forms, and launch your site live." },
+  { n: "05", title: "Support & Updates", desc: "We help you update content, add new products, and keep your website running smoothly." },
 ];
 
 export const LAYERS = [
-  { title: "Input", items: ["Email", "PDF / Scans", "Excel / CSV", "Webhooks / APIs"], accent: "cyan" },
-  { title: "AI + Automation", items: ["OCR & Extraction", "Schema Validation", "Business Logic"], accent: "purple" },
-  { title: "Integrations", items: ["SAP / Oracle / ERP", "Salesforce / CRM", "PostgreSQL / Cloud"], accent: "blue" },
-  { title: "Output", items: ["Live Analytics", "Automated Actions", "Audit Reports"], accent: "green" },
+  { title: "Design & Layout", items: ["Custom Mobile Design", "High-Resolution Images", "Fast Loading Pages", "Clean Typography"], accent: "cyan" },
+  { title: "Customer Actions", items: ["1-Tap WhatsApp Button", "Direct Phone Call Link", "Instant Contact Form", "Google Map Location"], accent: "purple" },
+  { title: "Payments & Orders", items: ["UPI / Google Pay", "Credit / Debit Cards", "Instant PDF Receipts", "Order Confirmation SMS"], accent: "blue" },
+  { title: "Hosting & Peace of Mind", items: ["Free SSL Certificate", "99.9% Reliable Uptime", "Google Search Setup", "Daily Automatic Backups"], accent: "green" },
 ];
 
 export const INDUSTRIES_VISUAL = [
-  { icon: Building2, title: "Manufacturing", accent: "blue" },
-  { icon: Truck, title: "Logistics & Supply Chain", accent: "cyan" },
-  { icon: HeartPulse, title: "Healthcare & Biotech", accent: "purple" },
-  { icon: ShoppingCart, title: "Retail & E-Commerce", accent: "green" },
+  { icon: Building2, title: "Local Businesses & Shops", accent: "blue" },
+  { icon: ShoppingBag, title: "Retail & E-Commerce Brands", accent: "purple" },
+  { icon: Stethoscope, title: "Clinics & Doctors", accent: "cyan" },
+  { icon: Briefcase, title: "Consultants & Agencies", accent: "green" },
 ];
 
 export const INDUSTRIES_COMPACT = [
-  { icon: Landmark, title: "Banking & Finance" },
-  { icon: GraduationCap, title: "Education & EdTech" },
-  { icon: Briefcase, title: "Professional Services" },
-  { icon: Rocket, title: "High-Growth Startups" },
+  { icon: Home, title: "Real Estate & Interiors" },
+  { icon: Utensils, title: "Restaurants & Cafes" },
+  { icon: GraduationCap, title: "Coaching & Education" },
+  { icon: Truck, title: "Logistics & Services" },
 ];
 
 export const SERVICES = [
-  "AI & Machine Learning",
-  "Custom Software Development",
-  "Process Automation (RPA)",
-  "API & ERP Integration",
-  "Cloud Architecture",
-  "Data Analytics & BI"
+  "Modern Website Design",
+  "Online Stores & E-Commerce",
+  "Appointment Booking Systems",
+  "WhatsApp & Lead Automation",
+  "Mobile Optimization & Speed Fix",
+  "Custom Business Software"
 ];
 
-export const MANUAL_FLOW = ["PDF Received", "Manual Entry", "Spreadsheet Check", "Line Verification", "Manual ERP Entry"];
-export const ARSAK_FLOW = ["PDF Received", "AI Auto-Extraction", "Schema Validation", "Automated Routing", "Instant ERP Sync"];
+export const MANUAL_FLOW = [
+  "Customer lands on slow website",
+  "Cannot find phone number or pricing",
+  "Leaves website without contacting",
+  "Business loses a potential customer"
+];
 
-export const DEMO_STEPS = ["Document Received", "AI Parsing & OCR", "Automated Validation", "ERP Sync Complete"];
+export const ARSAK_FLOW = [
+  "Customer lands on fast mobile site",
+  "Taps 1-click WhatsApp or booking button",
+  "Gets instant reply & answers",
+  "Deal closed with zero delay"
+];
+
+export const DEMO_STEPS = [
+  "Visitor Inquires on Website",
+  "Instant AI Response & Qualification",
+  "Automated WhatsApp & Email Confirmation",
+  "Synced Directly to Admin CRM"
+];
+
 export const DEMO_RESULT = {
-  "Customer": "ABC Industries Ltd.",
-  "Invoice No": "#INV-2048",
-  "Line Items": "14 Items Verified",
-  "Total Amount": "₹84,500.00",
-  "Confidence Score": "99.8%",
-  "ERP Status": "Synchronized"
+  "Customer": "Acme Retail Ltd.",
+  "Project Type": "E-Commerce + WhatsApp Suite",
+  "Delivery Timeline": "14 Days",
+  "PageSpeed Score": "99 / 100",
+  "Conversion Uplift": "+340%",
+  "Status": "Live in Production"
 };
 
 export const STATS = [
-  { label: "Average Automation Rate", to: 78, suffix: "%", icon: Gauge, accent: "blue" },
-  { label: "Weekly Tasks Automated", to: 1284, suffix: "+", icon: TrendingUp, accent: "purple" },
-  { label: "Cycle Time Reduction", to: 42, prefix: "-", suffix: "%", icon: TrendingDown, accent: "green" },
-  { label: "Error Rate Reduction", to: 94, suffix: "%", icon: AlertTriangle, accent: "orange" },
-];
-
-export const INTEGRATION_CATEGORIES = [
-  { name: "ERP Systems", accent: "blue" },
-  { name: "CRM Platforms", accent: "purple" },
-  { name: "SQL & NoSQL DBs", accent: "cyan" },
-  { name: "AWS & GCP Cloud", accent: "green" },
-  { name: "Custom REST/GraphQL APIs", accent: "orange" },
+  { label: "Page Load Speed", to: 1, prefix: "< ", suffix: " Sec", icon: Gauge, accent: "blue" },
+  { label: "Mobile Compatibility", to: 100, suffix: "%", icon: Smartphone, accent: "green" },
+  { label: "Average Delivery Time", to: 14, suffix: " Days", icon: Clock, accent: "purple" },
+  { label: "Client Satisfaction", to: 100, suffix: "%", icon: ShieldCheck, accent: "orange" },
 ];
 
 export const WHY = [
-  { icon: Users, title: "Business First", desc: "We design technology around your specific operational workflows, not off-the-shelf templates.", accent: "blue" },
-  { icon: Layers, title: "Enterprise Scalability", desc: "Modular, cloud-native architecture built to scale effortlessly with your volume.", accent: "purple" },
-  { icon: ShieldCheck, title: "Security & Reliability", desc: "Rigorous data encryption, compliance-ready audit trails, and 99.9% uptime reliability.", accent: "green" },
+  { title: "Clean & Custom Built", desc: "No bloated, slow templates. Every website is built fresh for speed, clear readability, and real customer inquiries.", icon: Sparkles, accent: "blue" },
+  { title: "100% Mobile Optimized", desc: "Most of your customers will visit from their phones. We ensure your website looks stunning on every mobile screen.", icon: Smartphone, accent: "purple" },
+  { title: "Grow At Your Own Pace", desc: "Start with a simple business website today, and easily add an online store, booking tools, or custom software as you expand.", icon: Zap, accent: "green" }
+];
+
+export const INTEGRATION_CATEGORIES = [
+  { name: "WhatsApp Business", accent: "green" },
+  { name: "UPI / Google Pay / Razorpay", accent: "blue" },
+  { name: "Google Calendar", accent: "purple" },
+  { name: "Google Sheets & CRM", accent: "cyan" },
+  { name: "Instagram & Social Links", accent: "orange" }
 ];

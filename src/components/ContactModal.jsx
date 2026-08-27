@@ -94,7 +94,7 @@ export const ContactModal = ({ isOpen, onClose }) => {
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 sm:p-8 bg-white">
+            <div className="p-4 sm:p-6 sm:p-8 bg-white">
               {submitted ? (
                 <div className="py-6 text-center flex flex-col items-center">
                   <div className="w-14 h-14 rounded-full bg-[#ECFDF5] border border-[#A7F3D0] flex items-center justify-center text-[#059669] mb-4 shadow-sm">

@@ -6,10 +6,10 @@ import { FlowLine } from "../common/FlowLine";
 import { InteractiveCard } from "../common/InteractiveCard";
 
 const FeaturedFlow = ({ title, steps, isArsak }) => (
-  <InteractiveCard className="p-6 md:p-8 h-full flex flex-col justify-between items-center text-center">
+  <InteractiveCard className="p-4 sm:p-6 md:p-8 h-full flex flex-col justify-between items-center text-center">
     <div className="w-full flex flex-col items-center">
       {/* Centered Flow Category Title */}
-      <div className="flex items-center justify-center mb-6 w-full">
+      <div className="flex items-center justify-center mb-5 sm:mb-6 w-full">
         <span
           className={`inline-block text-xs font-mono tracking-wider uppercase font-bold px-4 py-1.5 rounded-full border text-center ${
             isArsak
@@ -26,7 +26,7 @@ const FeaturedFlow = ({ title, steps, isArsak }) => (
         {steps.map((s, i) => (
           <div key={s} className="w-full flex flex-col items-center">
             <div
-              className={`text-xs sm:text-sm rounded-xl px-4 py-3 border font-semibold text-center w-full max-w-sm flex items-center justify-center ${
+              className={`text-xs sm:text-sm rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 border font-semibold text-center w-full max-w-sm flex items-center justify-center ${
                 isArsak
                   ? "border-[#BCEB28] bg-[#FAF7F0] text-[#0D0C09] shadow-[0_4px_12px_rgba(188,235,40,0.15)]"
                   : "border-[rgba(22,20,14,0.11)] bg-[#FAF7F0] text-[#6B6557]"
@@ -47,18 +47,18 @@ const FeaturedFlow = ({ title, steps, isArsak }) => (
 );
 
 export const UseCaseSection = () => (
-  <section className="py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
-    <div className="max-w-7xl mx-auto px-6 md:px-8">
+  <section className="py-12 sm:py-16 md:py-24 border-t border-[rgba(22,20,14,0.11)] bg-transparent relative">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
       <SectionHeading
-        eyebrow="Workflow Comparison"
-        title="From Manual Drag to Instant Execution"
-        sub="Side-by-side comparison of conventional document entry versus Arsak AI extraction."
+        eyebrow="Visitor Experience"
+        title="The Difference a Modern Website Makes"
+        sub="See how a fast, clear website turns everyday visitors into paying customers without friction."
         center
       />
       <Reveal delay={0.08}>
-        <div className="mt-12 grid md:grid-cols-2 gap-6">
-          <FeaturedFlow title="Traditional Manual Process" steps={MANUAL_FLOW} isArsak={false} />
-          <FeaturedFlow title="Arsak Automated Pipeline" steps={ARSAK_FLOW} isArsak={true} />
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <FeaturedFlow title="Old / Slow Website" steps={MANUAL_FLOW} isArsak={false} />
+          <FeaturedFlow title="Fast Modern Arsak Website" steps={ARSAK_FLOW} isArsak={true} />
         </div>
       </Reveal>
     </div>

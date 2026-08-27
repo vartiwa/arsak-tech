@@ -4,8 +4,8 @@ import { Reveal } from "../common/Reveal";
 import { SectionHeading } from "../common/SectionHeading";
 
 export const IntegrationsSection = () => (
-  <section className="py-16 md:py-20 border-t border-[rgba(22,20,14,0.11)] bg-transparent">
-    <div className="max-w-7xl mx-auto px-6 md:px-8">
+  <section className="py-12 sm:py-16 md:py-20 border-t border-[rgba(22,20,14,0.11)] bg-transparent">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
       <SectionHeading
         eyebrow="Integrations"
         title="Seamlessly Integrates with Your Existing Stack."
