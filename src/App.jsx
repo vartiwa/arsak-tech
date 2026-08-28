@@ -23,6 +23,7 @@ import { WhySection } from "./components/sections/WhySection";
 import { AboutSection } from "./components/sections/AboutSection";
 import { CTASection } from "./components/sections/CTASection";
 import { Footer } from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function ArsakTechnologies() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -94,6 +95,9 @@ export default function ArsakTechnologies() {
         onClose={closeAuth}
         onLoginSuccess={handleLoginSuccess}
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
